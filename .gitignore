@@ -1,11 +1,15 @@
-.wg-file.el
-/url/cache
-/.emacs.desktop
+
+/elpa
+/server
 /save-backup
 /metadata
+
 /auto-save-list
 /.session
 /custom.el
+/url/cache
+/.emacs.desktop
+
 *.elc
 CVS
 .svn
@@ -24,13 +28,11 @@ cookies
 /newsticker
 /ac-comphist.dat
 \#*
-/elpa
 eshell/
 semanticdb/
 *.swp
 *~
 abbrev_defs
-/swank
 /swank
 /.mc-lists.el
 TAGS
@@ -45,3 +47,4 @@ org-clock-save.el
 emms/
 projectile-bookmarks.eld
 history
+.wg-file.el
