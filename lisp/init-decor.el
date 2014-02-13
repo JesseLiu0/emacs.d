@@ -66,7 +66,7 @@
 ;(color-theme-initialize) ;; unnecessary if installed with elpa
 (load-library "~/.emacs.d/lisp/init-tango-theme-custom")
 ;;(if (window-system)
-    (color-theme-tango-light)
+(color-theme-tango-light)
     ;; ;; (color-theme-tty-dark))
 ;;  (color-theme-tango))
 

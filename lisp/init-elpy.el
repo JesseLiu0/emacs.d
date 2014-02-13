@@ -37,8 +37,8 @@
 ;; OS dependent
 (if (eq system-type 'windows-nt)
     (setq
-     python-shell-interpreter "C:\\apps\\Python27\\python.exe"
-     python-shell-interpreter-args "-i C:\\apps\\Python27\\Scripts\\ipython-script.py"
+     python-shell-interpreter "C:\\Anaconda\\python.exe"
+     python-shell-interpreter-args "-i C:\\Anaconda\\Scripts\\ipython-script.py"
      )
   (setq
    python-shell-interpreter "ipython"
