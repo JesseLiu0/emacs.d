@@ -97,7 +97,6 @@
  ;; !!! not working with emacs --daemon !!!
  ;; delete files to ~/.Trash/
  '(delete-by-moving-to-trash t)
-
  )
 
 
