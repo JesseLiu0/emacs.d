@@ -54,11 +54,6 @@
 ;; elpa package management
 (load "~/.emacs.d/lisp/init-elpa.el")
 
-;; --------------NOT IN USE--------------
-;; Standalone CEDET has to be loaded and built-in CEDET has to be unloaded before CEDET used by others (el-get).
-;;(load "~/.emacs.d/lisp/init-cedet.el") ;; CEDET devel version from bzr
-;; --------------NOT IN USE--------------
-
 ;; basic preferences
 (load "~/.emacs.d/lisp/init-emacs-pref.el")  ;; Emacs Preferences
 (load "~/.emacs.d/lisp/init-key-bindings.el")  ;; key bindings
@@ -74,7 +69,8 @@
 (load "~/.emacs.d/lisp/init-swiss-knife.el")
 
 ;; big tools
-(load "~/.emacs.d/lisp/init-auto-complete.el") ;; auto-complete
+(load "~/.emacs.d/lisp/init-cedet.el")
+(load "~/.emacs.d/lisp/init-auto-complete.el")
 (load "~/.emacs.d/lisp/init-yasnippet.el")
 (load "~/.emacs.d/lisp/init-pabbrev.el")
 (load "~/.emacs.d/lisp/init-ecb.el")
