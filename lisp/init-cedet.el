@@ -37,10 +37,10 @@
 ;(add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
 ;;
 ;; Enable Semantic
-;(semantic-mode 1)
+(semantic-mode 1)
 
 ;; Change database directory
-;(setq semanticdb-default-save-directory "~/.emacs.d/metadata/semanticdb/")
+(setq semanticdb-default-save-directory "~/.emacs.d/metadata/semanticdb/")
 
 ;; if you want to enable support for gnu global
 ;(semanticdb-enable-gnu-global-databases 'c-mode)
