@@ -71,7 +71,3 @@
 ;; in acorresponding source file
 (require 'member-functions)
 (setq mf--source-file-extension "cpp")
-
-
-;; flymake
-(add-hook 'find-file-hook 'flymake-find-file-hook)

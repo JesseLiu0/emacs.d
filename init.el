@@ -71,17 +71,16 @@
 ;; big tools
 (load "~/.emacs.d/lisp/init-cedet.el")
 (load "~/.emacs.d/lisp/init-auto-complete.el")
-(load "~/.emacs.d/lisp/init-pabbrev.el")
 (load "~/.emacs.d/lisp/init-ecb.el")
 
 ;; mode configs
-(load "~/.emacs.d/lisp/init-shell-mode.el") ;; shell-mode
-(load "~/.emacs.d/lisp/init-text-mode.el") ;; text-mode
-(load "~/.emacs.d/lisp/init-lisp-mode.el") ;; lisp-mode
-(load "~/.emacs.d/lisp/init-cc-mode.el") ;; cc-mode
-(load "~/.emacs.d/lisp/init-ess-mode.el") ;; ESS-mode
-(load "~/.emacs.d/lisp/init-elpy.el") ;; python support by elpy
+(load "~/.emacs.d/lisp/init-shell-mode.el")
+(load "~/.emacs.d/lisp/init-text-mode.el")
+(load "~/.emacs.d/lisp/init-lisp-mode.el")
+(load "~/.emacs.d/lisp/init-cc-mode.el")
+(load "~/.emacs.d/lisp/init-ess-mode.el")
+(load "~/.emacs.d/lisp/init-python-mode.el") ;; with elpy
 ;; (load "~/.emacs.d/lisp/init-matlab-mode.el") ;; matlab-emacs make failed
-(load "~/.emacs.d/lisp/init-css-mode.el") ;; css-mode
+(load "~/.emacs.d/lisp/init-css-mode.el")
 
 

@@ -35,4 +35,4 @@
 (define-key ac-menu-map "\C-p" 'ac-previous)
 
 ;; Add ac-sources of all buffers
-(setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
+;(setq-default ac-sources '(ac-source-abbrev ac-source-dictionary ac-source-words-in-same-mode-buffers))
