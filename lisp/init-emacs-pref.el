@@ -97,6 +97,9 @@
  ;; !!! not working with emacs --daemon !!!
  ;; delete files to ~/.Trash/
  '(delete-by-moving-to-trash t)
+
+ ;; disable version control backend as opening a GIT repo file is really slow
+ '(vc-handled-backends ())
  )
 
 
