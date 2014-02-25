@@ -18,6 +18,12 @@
 (elpy-use-ipython)
 ;;  (elpy-clean-modeline))
 
+;; permanatenly use jedi as rpc backend
+(setq elpy-rpc-backend "jedi")
+
+;; Remove flymake-mode from elpy-default-minor-modes because of performance issue
+(setq elpy-default-minor-modes (quote (eldoc-mode highlight-indentation-mode yas-minor-mode auto-complete-mode)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;

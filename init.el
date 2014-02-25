@@ -71,7 +71,6 @@
 ;; big tools
 (load "~/.emacs.d/lisp/init-cedet.el")
 (load "~/.emacs.d/lisp/init-auto-complete.el")
-(load "~/.emacs.d/lisp/init-yasnippet.el")
 (load "~/.emacs.d/lisp/init-pabbrev.el")
 (load "~/.emacs.d/lisp/init-ecb.el")
 

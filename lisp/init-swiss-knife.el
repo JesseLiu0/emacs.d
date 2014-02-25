@@ -72,10 +72,9 @@
 ;; slick copy. 
 ;; Copy (M-w) or Cut (C-w) the whole line when mark not set. 
 ;; Paste (C-y) the whole line before the current line regardless cursor position.
-;; (require 'whole-line-or-region) ;; elpa init
+;; (require 'whole-line-or-region) ;; unnecessary.elpa init
 (whole-line-or-region-mode t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
