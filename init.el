@@ -18,6 +18,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
+;; Load develpment version CEDET
+;; This must be loaded at the beginning to prevent built-in CEDET loading.
+;;
+(load "~/.emacs.d/lisp/init-cedet.el")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
 ;; Set system environment variables
 ;;
 (when (equal system-type 'darwin)
@@ -27,12 +35,14 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
 ;; Library Paths
 ;; Note: Keep every emacs library underneath ~/.emacs.d and 
 ;;   shun loading them from the system paths. This makes it 
 ;;   easier to use this config on multiple systems.
-
-;(push "~/.emacs.d" load-path)
+;;
+;; (push "~/.emacs.d" load-path)
+;;
 ;; recursively add the sub-directories to load-path
 (let ((default-directory "~/.emacs.d/site-lisp/"))
   (normal-top-level-add-subdirs-to-load-path))
@@ -69,7 +79,6 @@
 (load "~/.emacs.d/lisp/init-swiss-knife.el")
 
 ;; big tools
-(load "~/.emacs.d/lisp/init-cedet.el")
 (load "~/.emacs.d/lisp/init-auto-complete.el")
 (load "~/.emacs.d/lisp/init-ecb.el")
 

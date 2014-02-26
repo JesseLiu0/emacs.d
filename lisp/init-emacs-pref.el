@@ -36,8 +36,8 @@
  '(frame-title-format "%b")
 
  ;; Line numbering
- '(linum-format "%4d")
- '(global-linum-mode t)
+ ;'(linum-format "%4d")
+ ;'(global-linum-mode t)
 
  ;; Scroll line by line
  '(scroll-step 1)
