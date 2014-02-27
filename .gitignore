@@ -19,6 +19,7 @@ cookies
 /newsticker
 eshell/
 
+/srecode-map.el
 
 *.elc
 *_flymake.el
