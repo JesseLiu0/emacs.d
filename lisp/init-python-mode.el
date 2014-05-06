@@ -30,8 +30,13 @@
 ;; permanatenly use jedi as rpc backend
 (setq elpy-rpc-backend "jedi")
 
-;; Remove flymake-mode and auto-complete-mode from elpy-default-minor-modes because of freezing issue
-(setq elpy-default-minor-modes (quote (eldoc-mode highlight-indentation-mode yas-minor-mode)))
+;; Imperfect workaround for solving RPC freezing on Windows.
+;; Kill python.exe process if freezing happens.
+(if (eq system-type 'windows-nt)
+    (setq elpy-rpc-python-command "pythonw"))
+
+;; elpy-default-minor-modes
+(setq elpy-default-minor-modes (quote (auto-complete-mode flymake-mode eldoc-mode highlight-indentation-mode yas-minor-mode)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
