@@ -20,6 +20,9 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; reverse the global mode set by ac-config-default
+(global-auto-complete-mode -1)
+
 ;; move data file
 (setq ac-comphist-file "~/.emacs.d/metadata/ac-comphist-file.dat")
 
