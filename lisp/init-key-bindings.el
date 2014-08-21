@@ -4,16 +4,18 @@
 ;;
 ;; rc-key-bindings.el
 ;;
-;; Copyright (C) 2013 Eric N. Liu
+;; Copyright (C) 2006-2014 N. Liu
 ;; 
 ;; Description: global key bindings
-;; Author: Eric N. Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.1
+;; Author: N. Liu (eenliu@gmail.com)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+;; swap CMD with Control for Mac
+(if (eq system-type 'darwin)
+    (progn
+     (setq mac-command-modifier 'control)
+     (setq mac-control-modifier 'super)))
 
 
 ;; Mark-ring (bookmarks) is navigable by typing C-u C-SPC and then repeating C-SPC forever
