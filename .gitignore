@@ -2,7 +2,7 @@
 /elpa
 /server
 /save-backup
-/metadata
+/cache
 /site-lisp/cedet
 
 /auto-save-list
