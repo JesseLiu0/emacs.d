@@ -17,6 +17,17 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ido
+;;
+(setq 
+  ido-save-directory-list-file "~/.emacs.d/cache/ido.last"
+  ido-ignore-buffers ;; ignore these guys
+  '("\\` " "^\*Mess" "^\*Back" ".*Completion" "^\*Ido" "^\*trace"
+     "^\*compilation" "^\*GTAGS" "^session\.*" "^\*")
+  ido-work-directory-list '("~/" "~/Documents" "~/dev"))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; tabbar-ruler
 (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
 ;(setq tabbar-ruler-global-ruler t) ; if you want a global ruler
