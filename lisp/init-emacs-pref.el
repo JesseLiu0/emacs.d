@@ -136,12 +136,12 @@
 
 
 ;; auto save prefix (directory)
-(setq auto-save-list-file-prefix "~/.emacs.d/save-backup/auto-save-list/.saves-")
+(setq auto-save-list-file-prefix "~/.emacs.d/cache/auto-save-list/.saves-")
 
 
 ;;Place all backup copies of files in a common location
 (defconst use-backup-dir t)   
-(setq backup-directory-alist (quote ((".*" . "~/.emacs.d/save-backup/backups/")))
+(setq backup-directory-alist (quote ((".*" . "~/.emacs.d/cache/backups/")))
       version-control t                ; Use version numbers for backups
       kept-new-versions 16             ; Number of newest versions to keep
       kept-old-versions 2              ; Number of oldest versions to keep
