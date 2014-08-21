@@ -59,7 +59,7 @@
 ;; enable ctags for some languages:
 ;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm
 (when (cedet-ectag-version-check)
-  (semantic-load-enable-primary-exuberent-ctags-support))
+  (semantic-load-enable-all-exuberent-ctags-support))
 
 ;; Use CEDET contrib package for code folding
 ;; global-semantic-tag-folding-mode does not work. Need hacks. See this ref:

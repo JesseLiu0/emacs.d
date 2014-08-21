@@ -15,10 +15,15 @@
 
 
 
-;; load the complete ECB at (X)Emacs-loadtime
-(require 'ecb)
-(require 'ecb-autoloads)
+;; Loading ECB is done by ELPA. Manual loading unnecessary.
+;;------- Load ECB. Pick one of the two ways below. ------
+;; 1. load the complete ECB at (X)Emacs-loadtime
+;;(require 'ecb)
+;; 2. load after starting it by ecb-activate
+;;(require 'ecb-autoloads)
 
+
+;;------ Customize ECB ------
 (setq-default ecb-tip-of-the-day nil)
 (setq-default ecb-layout-name "leftright1")
 (setq-default ecb-layout-window-sizes
