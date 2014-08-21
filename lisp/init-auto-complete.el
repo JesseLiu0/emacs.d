@@ -24,7 +24,7 @@
 (global-auto-complete-mode -1)
 
 ;; move data file
-(setq ac-comphist-file "~/.emacs.d/metadata/ac-comphist-file.dat")
+(setq ac-comphist-file "~/.emacs.d/cache/ac-comphist-file.dat")
 
 ;; set the delay time (seconds) of showing selectin menu
 (setq ac-auto-show-menu 0.2)

@@ -89,7 +89,7 @@
 
  ;;Allow fetching files from HTTP servers
  '(url-handler-mode t)
- '(url-cookie-file "~/.emacs.d/metadata/url/cookies")
+ '(url-cookie-file "~/.emacs.d/cache/url/cookies")
 
  ;;TRAMP should default to ssh
  '(tramp-default-method "ssh")

@@ -39,4 +39,4 @@
 	  '(lambda () (autopair-mode -1)))
 
 
-(setq eshell-directory-name "~/.emacs.d/metadata/eshell")
+(setq eshell-directory-name "~/.emacs.d/cache/eshell")
