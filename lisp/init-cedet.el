@@ -1,5 +1,3 @@
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; init-cedet.el
@@ -18,6 +16,10 @@
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Move SRecode map file. It has to be placed before loading cedet-devel-load.el.
+(setq srecode-map-save-file "~/.emacs.d/cache/srecode-map.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -72,8 +74,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; Enable EDE (Project Management) features
-;(global-ede-mode 1)
-
-
+;;(global-ede-mode 1)
+;;
+;; Move EDE project cache file
+;;(setq ede-project-placeholder-cache-file "~/.emacs.d/cache/ede-projects.el")
 
 

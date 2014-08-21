@@ -1,7 +1,6 @@
 
 /elpa
 /server
-/save-backup
 /cache
 /site-lisp/cedet
 
@@ -10,23 +9,22 @@
 /custom.el
 /url/cache
 /.emacs.desktop
-
 /tramp
 /TODO
 /anything-c-adaptive-history
 /.org-id-locations
-cookies
 /newsticker
-eshell/
 
-/srecode-map.el
+cookies
+eshell/
+emms/
+
 
 *.elc
 *_flymake.el
 .bookmarks.el
 .yas-compiled-snippets.el
 .wg-file.el
-
 history
 CVS
 .cvsignore
@@ -38,15 +36,10 @@ CVS
 *.swp
 *~
 abbrev_defs
-/swank
-/.mc-lists.el
 TAGS
 GTAGS
 GPATH
 GRTAGS
-tutorial/
-/var
 org-clock-save.el
 .\#*
-emms/
 projectile-bookmarks.eld
