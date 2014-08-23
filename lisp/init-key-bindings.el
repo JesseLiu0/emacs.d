@@ -11,13 +11,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;; swap CMD with Control for Mac
-(if (eq system-type 'darwin)
-    (progn
-     (setq mac-command-modifier 'control)
-     (setq mac-control-modifier 'super)))
-
-
 ;; Mark-ring (bookmarks) is navigable by typing C-u C-SPC and then repeating C-SPC forever
 ;; Push marks to mark-ring by C-SPC C-SPC
 (setq set-mark-command-repeat-pop t)
