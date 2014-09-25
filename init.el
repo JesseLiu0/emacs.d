@@ -79,7 +79,6 @@
 (load "~/.emacs.d/lisp/init-swiss-knife.el")
 
 ;; big tools
-(load "~/.emacs.d/lisp/init-auto-complete.el")
 (load "~/.emacs.d/lisp/init-ecb.el")
 
 ;; mode configs
