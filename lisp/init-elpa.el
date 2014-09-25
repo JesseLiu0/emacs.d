@@ -1,11 +1,9 @@
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; rc-elpa.el
 ;;
-;; Copyright (C) 2013 Tony Liu
-;; 
+;; Copyright (C) 2013-2014 N. Liu
+;;
 ;; Description: Config ELPA, install missing packages, and initilize them.
 ;; Author: Tony Liu (eenliu@gmail.com)
 ;; Keywords:
@@ -32,19 +30,21 @@
 (setq package-archives '(
 			 ("melpa" . "http://melpa.milkbox.net/packages/")
 ;;			 ("marmalade" . "http://marmalade-repo.org/packages/")
-			 ("gnu" . "http://elpa.gnu.org/packages/")
-			 )) 
+;;			 ("gnu" . "http://elpa.gnu.org/packages/")
+			 ))
 
 (defvar prelude-packages
-  '(magit elpy yasnippet idomenu ecb iedit ess ess-R-data-view ctable autopair color-theme column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev rainbow-mode rainbow-delimiters smart-operator tabbar tabbar-ruler volatile-highlights whole-line-or-region)
+  '(magit elpy yasnippet idomenu ecb iedit ess ess-R-data-view ctable autopair color-theme column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler volatile-highlights whole-line-or-region)
   "A list of packages to ensure are installed at launch.")
+
+;; rainbow-mode rainbow-delimiters not installed because GNU unavailable
 
 (defun prelude-packages-installed-p ()
   (loop for p in prelude-packages
         when (not (package-installed-p p)) do (return nil)
         finally (return t)))
 
-(unless (prelude-packages-installed-p) 
+(unless (prelude-packages-installed-p)
   ;; check for new packages (package versions)
   (message "%s" "Emacs Prelude is now refreshing its package database...")
   (package-refresh-contents)
@@ -53,6 +53,3 @@
   (dolist (p prelude-packages)
     (when (not (package-installed-p p))
       (package-install p))))
-
-
-

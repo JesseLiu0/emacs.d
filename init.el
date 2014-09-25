@@ -89,6 +89,6 @@
 (load "~/.emacs.d/lisp/init-ess-mode.el")
 (load "~/.emacs.d/lisp/init-python-mode.el") ;; with elpy
 ;; (load "~/.emacs.d/lisp/init-matlab-mode.el") ;; matlab-emacs make failed
-(load "~/.emacs.d/lisp/init-css-mode.el")
+;; (load "~/.emacs.d/lisp/init-css-mode.el") ;; comment out because GNU ELPA unavilable to install rainbow-mode
 
 

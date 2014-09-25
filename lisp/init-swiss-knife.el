@@ -28,6 +28,18 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; yasnippet
+;;
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"                 ;; personal snippets
+        "/path/to/some/collection/"           ;; foo-mode and bar-mode snippet collection
+        "/path/to/yasnippet/yasmate/snippets" ;; the yasmate collection
+        "/path/to/yasnippet/snippets"         ;; the default collection
+        ))
+(yas-global-mode 1) 
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; tabbar-ruler
 (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
 ;(setq tabbar-ruler-global-ruler t) ; if you want a global ruler
