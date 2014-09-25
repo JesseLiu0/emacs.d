@@ -36,7 +36,7 @@
 			 )) 
 
 (defvar prelude-packages
-  '(magit elpy yasnippet auto-complete auto-complete-clang find-file-in-project fuzzy highlight-indentation idomenu  ecb iedit nose popup virtualenv ess ess-R-data-view ctable autopair color-theme column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev rainbow-mode rainbow-delimiters smart-operator tabbar tabbar-ruler volatile-highlights whole-line-or-region)
+  '(magit elpy yasnippet idomenu ecb iedit ess ess-R-data-view ctable autopair color-theme column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev rainbow-mode rainbow-delimiters smart-operator tabbar tabbar-ruler volatile-highlights whole-line-or-region)
   "A list of packages to ensure are installed at launch.")
 
 (defun prelude-packages-installed-p ()
