@@ -64,8 +64,8 @@
 (add-hook 'c-mode-hook (lambda () (imenu-add-menubar-index)))
 (add-hook 'c++-mode-hook (lambda () (imenu-add-menubar-index)))
 
-(require 'auto-complete-clang)
-(define-key c++-mode-map (kbd "C-S-<return>") 'ac-complete-clang)
+;; (require 'auto-complete-clang)
+;; (define-key c++-mode-map (kbd "C-S-<return>") 'ac-complete-clang)
 
 ;; C++ function definitions in a header file are expanded to definitions
 ;; in acorresponding source file

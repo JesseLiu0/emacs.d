@@ -36,7 +36,7 @@
     (setq elpy-rpc-python-command "pythonw"))
 
 ;; elpy-default-minor-modes
-(setq elpy-default-minor-modes (quote (auto-complete-mode flymake-mode eldoc-mode highlight-indentation-mode yas-minor-mode)))
+(setq elpy-default-minor-modes (quote (flymake-mode eldoc-mode highlight-indentation-mode yas-minor-mode)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
