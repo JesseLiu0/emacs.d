@@ -114,8 +114,6 @@
 ;; (require 'rainbow-delimiters) ;; elpa init
 ;;- To enable in all programming-related modes (Emacs 24+):
 ;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-;;- To use Emacs-wide, add this line:
-(global-rainbow-delimiters-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
