@@ -24,7 +24,7 @@
 ;; elpy
 ;;
 (elpy-enable)
-;; (elpy-use-ipython)
+(elpy-use-ipython)
 ;;  (elpy-clean-modeline))
 
 ;; permanatenly use jedi as rpc backend
@@ -104,19 +104,6 @@
 ;;             (set-variable 'python-indent-offset 4) ;; 4 is default
 ;; 	    (require 'smart-operator)
 ;;             ))
-
-
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;;
-;; ;; auto completion by emacs-jedi
-;; ;;
-;; (add-to-list 'load-path "~/.emacs.d/el-get/jedi")
-;; (setq jedi:setup-keys t)
-;; (require 'jedi)
-;; (add-hook 'python-mode-hook 'jedi:setup)
-;; ;; legacy ac-sources, not from jedi
-;; ;; (add-hook 'python-mode-hook (lambda ()
-;; 			      ;; (add-to-list 'ac-sources '(ac-source-semantic ac-source-yasnippet))))
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; ;;
