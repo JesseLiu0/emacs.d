@@ -75,10 +75,9 @@
 (load "~/.emacs.d/lisp/init-desktop.el") ;; desktop package for saving buffer list and window management
 (load "~/.emacs.d/lisp/init-dired.el") ;; dired, ibuffer, etc. for file management
 
-;; small tools
+;; major extensions
 (load "~/.emacs.d/lisp/init-swiss-knife.el")
-
-;; big tools
+(load "~/.emacs.d/lisp/init-ggtags.el")
 (load "~/.emacs.d/lisp/init-ecb.el")
 
 ;; mode configs
