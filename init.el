@@ -77,7 +77,6 @@
 
 ;; major extensions
 (load "~/.emacs.d/lisp/init-swiss-knife.el")
-(load "~/.emacs.d/lisp/init-ggtags.el")
 (load "~/.emacs.d/lisp/init-ecb.el")
 
 ;; mode configs
