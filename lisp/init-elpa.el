@@ -34,7 +34,7 @@
 			 ))
 
 (defvar prelude-packages
-  '(magit elpy yasnippet idomenu iedit ess ess-R-data-view ctable autopair color-theme column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler volatile-highlights whole-line-or-region)
+  '(magit elpy yasnippet sr-speedbar idomenu iedit ess ess-R-data-view ctable autopair color-theme column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler volatile-highlights whole-line-or-region)
   "A list of packages to ensure are installed at launch.")
 
 ;; rainbow-mode rainbow-delimiters not installed because GNU unavailable
