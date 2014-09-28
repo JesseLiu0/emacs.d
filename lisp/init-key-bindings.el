@@ -74,6 +74,9 @@
 ;Make dabbrev completion a little easier to hit
 (global-set-key (kbd "M-RET") 'dabbrev-expand)
 
+;; sr-speedbar-toggle
+(global-set-key (kbd "C-c s") 'sr-speedbar-toggle)
+
 
 
 
