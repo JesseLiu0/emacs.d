@@ -14,58 +14,49 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-
+;; cc-mode supports C, C++, Java
 (require 'cc-mode)
+
+;; Initialize function-args for C/C++
+(require 'function-args)
+(fa-config-default)
 
 ;; Open .h file in C++ mode instead of C mode.
 ;;(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-;; Indentation and Tab offset
-(define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
+;; Customize c-initialization-hook. Mainly for define-key.
+(add-hook 'c-initialization-hook
+	  (lambda ()
+	    (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
+	    ;; By company-mode
+	    (define-key c-mode-map  [(tab)] 'company-complete)
+	    (define-key c++-mode-map  [(tab)] 'company-complete)
+	    ;; By function-args
+	    (define-key c-mode-map (kbd "M-o")  'fa-show)
+	    (define-key c++-mode-map (kbd "M-o")  'fa-show)
+	    (define-key c-mode-map (kbd "<C-tab>") 'moo-complete)
+	    (define-key c++-mode-map (kbd "<C-tab>") 'moo-complete)
+	    ))
 
-;; To cause the *compilation* buffer to automatically scroll to the end of new output
-(setq compilation-scroll-output t)
+;; Customize c-mode-common-hook
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (c-toggle-auto-hungry-state 1)     ; turn on auto newline and hungry delete
+	    (setq compilation-scroll-output t) ; *compilation* buffer auto-scrolls to the end of new output
+	    (imenu-add-menubar-index)          ; Load imenu menubar
+	    (setq-local comment-auto-fill-only-comments t) ; use auto-fill-mode only for comments
+	    (auto-fill-mode 1)                 ; turn on auto-fill-mode
+	   ))
 
-;; create a face for function calls
-(add-hook 'c-mode-hook
-          (lambda ()
-            (font-lock-add-keywords
-             nil
-             '(("\\<\\(\\sw+\\) ?(" 1 font-lock-function-name-face)) t))) 
+;; Customize C/C++ mode hooks
+(defun my-c-c++-hook ()
+  ;; (c-set-style "my-style")        ; use my-style defined above
+  (add-to-list 'company-backends 'company-c-headers)
+  )
 
-(add-hook 'c++-mode-hook
-          (lambda ()
-            (font-lock-add-keywords
-             nil
-             '(("\\<\\(\\sw+\\) ?(" 1 font-lock-function-name-face)) t))) 
+(add-hook 'c-mode-hook 'my-c-c++-hook)
+(add-hook 'c++-mode-hook 'my-c-c++-hook)
 
-;; style I want to use in c++ mode
-(c-add-style "my-style" 
-	     '("stroustrup"
-	       (indent-tabs-mode . nil)        ; use spaces rather than tabs
-	       (c-basic-offset . 4)            ; indent by four spaces
-	       (c-offsets-alist . ((inline-open . 0)  ; custom indentation rules
-				   (brace-list-open . 0)
-				   (statement-case-open . +)))))
-
-(defun my-c++-mode-hook ()
-  (c-set-style "my-style")        ; use my-style defined above
-  (auto-fill-mode)         
-  (c-toggle-auto-hungry-state 1))
-
-(add-hook 'c++-mode-hook 'my-c++-mode-hook)
-
-
-;; turn on auto newline and hungry delete
-(add-hook 'c-mode-hook (lambda () (c-toggle-auto-hungry-state 1)))
-(add-hook 'c++-mode-hook (lambda () (c-toggle-auto-hungry-state 1)))
-
-;; Load imenu menubar
-(add-hook 'c-mode-hook (lambda () (imenu-add-menubar-index)))
-(add-hook 'c++-mode-hook (lambda () (imenu-add-menubar-index)))
-
-;; (require 'auto-complete-clang)
-;; (define-key c++-mode-map (kbd "C-S-<return>") 'ac-complete-clang)
 
 ;; C++ function definitions in a header file are expanded to definitions
 ;; in acorresponding source file

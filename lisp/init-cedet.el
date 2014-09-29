@@ -38,14 +38,13 @@
 ;; Add further minor-modes to be enabled by semantic-mode.
 ;; See doc-string of `semantic-default-submodes' for other things
 ;; you can use here.
+(add-to-list 'semantic-default-submodes 'global-semantic-idle-scheduler-mode t)
+(add-to-list 'semantic-default-submodes 'global-semanticdb-minor-mode t)
 ;;(add-to-list 'semantic-default-submodes 'global-semantic-stickyfunc-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-decoration-mode t)
 (add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-local-symbol-highlight-mode t)
 (add-to-list 'semantic-default-submodes 'global-semantic-idle-breadcrumbs-mode t)
-
-;; Enable Semantic
-(semantic-mode 1)
 
 ;; Change database directory
 (setq semanticdb-default-save-directory "~/.emacs.d/cache/semanticdb/")
@@ -62,6 +61,9 @@
 ;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm
 (when (cedet-ectag-version-check)
   (semantic-load-enable-all-exuberent-ctags-support))
+
+;; Enable Semantic
+(semantic-mode 1)
 
 ;; Use CEDET contrib package for code folding
 ;; global-semantic-tag-folding-mode does not work. Need hacks. See this ref:
