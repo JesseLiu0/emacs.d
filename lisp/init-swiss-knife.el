@@ -30,18 +30,10 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; yasnippet
+;; Snippets directory list is defined in yas-snippet-dirs.
 ;;
 (require 'yasnippet)
-
-;; Define personal snippets. Do not enable this unless the folder is
-;; actually created, otherwise snippets in default directory cannot
-;; be loaded correctly.
-;; (setq yas-snippet-dirs
-;;       '("~/.emacs.d/snippets"               
-;;         ))
-
-; Global mode disabled. yas-minor-mode is used for cc-mode and python-mode
-;; (yas-global-mode 1)    
+(yas-global-mode 1)    
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 

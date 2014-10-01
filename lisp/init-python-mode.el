@@ -36,7 +36,8 @@
     (setq elpy-rpc-python-command "pythonw"))
 
 ;; elpy-default-minor-modes
-(setq elpy-default-minor-modes (quote (flymake-mode eldoc-mode highlight-indentation-mode yas-minor-mode)))
+;; Do not need to add yas-minor-mode as yas-global-mode is enabled.
+(setq elpy-default-minor-modes (quote (flymake-mode eldoc-mode highlight-indentation-mode)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

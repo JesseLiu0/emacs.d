@@ -2,15 +2,15 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; rc-cc-mode.el
+;; init-cc-mode.el
 ;;
-;; Copyright (C) 2013 Eric N. Liu
+;; Copyright (C) 2013-2014 Ning Liu
 ;; 
-;; Description: cc-mode
-;; Author: Eric N. Liu (eenliu@gmail.com)
+;; Description: cc-mode setup
+;; Author: Ning Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.1
+;; Version: 0.5
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -29,8 +29,8 @@
 	  (lambda ()
 	    (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 	    ;; By company-mode
-	    (define-key c-mode-map  [(tab)] 'company-complete)
-	    (define-key c++-mode-map  [(tab)] 'company-complete)
+	    ;; (define-key c-mode-map  [(tab)] 'company-complete)
+	    ;; (define-key c++-mode-map  [(tab)] 'company-complete)
 	    ;; By function-args
 	    (define-key c-mode-map (kbd "M-o")  'fa-show)
 	    (define-key c++-mode-map (kbd "M-o")  'fa-show)
@@ -46,7 +46,6 @@
 	    (imenu-add-menubar-index)          ; Load imenu menubar
 	    (setq-local comment-auto-fill-only-comments t) ; use auto-fill-mode only for comments
 	    (auto-fill-mode 1)                 ; turn on auto-fill-mode
-	    (yas-minor-mode-on)                ; turn on yas-snippet
 	   ))
 
 ;; Customize C/C++ mode hooks
