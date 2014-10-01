@@ -46,6 +46,7 @@
 	    (imenu-add-menubar-index)          ; Load imenu menubar
 	    (setq-local comment-auto-fill-only-comments t) ; use auto-fill-mode only for comments
 	    (auto-fill-mode 1)                 ; turn on auto-fill-mode
+	    (yas-minor-mode-on)                ; turn on yas-snippet
 	   ))
 
 ;; Customize C/C++ mode hooks

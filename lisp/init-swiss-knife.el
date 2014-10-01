@@ -29,22 +29,27 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; company-mode
-;;
-(add-hook 'after-init-hook 'global-company-mode)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; yasnippet
 ;;
-(setq yas-snippet-dirs
-      '("~/.emacs.d/snippets"                 ;; personal snippets
-        "/path/to/some/collection/"           ;; foo-mode and bar-mode snippet collection
-        "/path/to/yasnippet/yasmate/snippets" ;; the yasmate collection
-        "/path/to/yasnippet/snippets"         ;; the default collection
-        ))
-(yas-global-mode 1) 
+(require 'yasnippet)
+
+;; Define personal snippets. Do not enable this unless the folder is
+;; actually created, otherwise snippets in default directory cannot
+;; be loaded correctly.
+;; (setq yas-snippet-dirs
+;;       '("~/.emacs.d/snippets"               
+;;         ))
+
+; Global mode disabled. yas-minor-mode is used for cc-mode and python-mode
+;; (yas-global-mode 1)    
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; company-mode
+;;
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
