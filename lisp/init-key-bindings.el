@@ -32,16 +32,16 @@
 (global-set-key [kp-delete] 'delete-char)
 
 ;; use F1 and F2 to skip between buffers
-(global-set-key [f1] 'yic-next-buffer) ;see below CUSTOM FUNCTIONS
-(global-set-key [f2] 'yic-prev-buffer) ;see below CUSTOM FUNCTIONS
+;; (global-set-key [f1] 'yic-next-buffer) ;see below CUSTOM FUNCTIONS
+;; (global-set-key [f2] 'yic-prev-buffer) ;see below CUSTOM FUNCTIONS
 
 ;;use F3 key to kill buffer
-(global-set-key [f3] 'kill-this-buffer)
+(global-set-key [f2] 'kill-this-buffer)
 
-(global-set-key [f4] 'comment-line) ;;see below CUSTOM FUNCTIONS
-(global-set-key [f5] 'uncomment-line) ;;see below CUSTOM FUNCTIONS
-(global-set-key [f6] 'query-replace)
+(global-set-key [f3] 'comment-line) ;;see below CUSTOM FUNCTIONS
+(global-set-key [f4] 'uncomment-line) ;;see below CUSTOM FUNCTIONS
 (global-set-key [f7] 'next-error)
+(global-set-key [f8] 'query-replace)
 ;;(global-set-key [f7] 'xterm-mouse-mode)
 ;;(global-set-key [f8] 'menu-bar-mode)
 ;;(global-set-key [f9] 'hs-hide-block)

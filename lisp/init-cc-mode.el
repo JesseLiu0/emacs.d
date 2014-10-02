@@ -45,7 +45,7 @@
 	    (setq compilation-scroll-output t) ; *compilation* buffer auto-scrolls to the end of new output
 	    (imenu-add-menubar-index)          ; Load imenu menubar
 	    (setq-local comment-auto-fill-only-comments t) ; use auto-fill-mode only for comments
-	    (auto-fill-mode 1)                 ; turn on auto-fill-mode
+	    (auto-fill-mode t)                 ; turn on auto-fill-mode
 	   ))
 
 ;; Customize C/C++ mode hooks
