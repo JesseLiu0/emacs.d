@@ -66,7 +66,7 @@
 ;;(global-set-key [(meta +)] 'enlarge-window)
 
 ;; set mark key to C- . instead of C-@
-(global-set-key (kbd "C-,") 'set-mark-command)
+;; (global-set-key (kbd "C-.") 'set-mark-command)
 
 ;Make other-frame instinctive
 (global-set-key "\C-co"	   'other-frame)
