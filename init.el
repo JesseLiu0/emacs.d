@@ -4,13 +4,13 @@
 ;;
 ;; init.el
 ;;
-;; Copyright (C) 2013 Eric N. Liu
+;; Copyright (C) 2013-2014 Ning Liu
 ;; 
-;; Description: Emacs configuration startup file.
-;; Author: Eric N. Liu (eenliu@gmail.com)
+;; Description: Emacs init.
+;; Author: Ning Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.1
+;; Version: 0.5
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -65,18 +65,16 @@
 (load "~/.emacs.d/lisp/init-elpa.el")
 
 ;; basic preferences
-(load "~/.emacs.d/lisp/init-emacs-pref.el")  ;; Emacs Preferences
-(load "~/.emacs.d/lisp/init-key-bindings.el")  ;; key bindings
-(load "~/.emacs.d/lisp/init-decor.el")  ;; fonts, color-theme, font zoom, etc.
-(load "~/.emacs.d/lisp/init-server-windows.el") ;; Set up server mode on Windows.
+(load "~/.emacs.d/lisp/init-emacs-pref.el")     ; Emacs Preferences
+(load "~/.emacs.d/lisp/init-key-bindings.el")   ; key bindings
+(load "~/.emacs.d/lisp/init-decor.el")          ; fonts, color-theme, font zoom, etc.
+(load "~/.emacs.d/lisp/init-server-windows.el") ; Set up server mode on Windows.
 
-;; buffer, window, file management
-(load "~/.emacs.d/lisp/init-buffer-management.el") ;; iswitchb, ido, uniquify, tab bar for buffer management
-(load "~/.emacs.d/lisp/init-desktop.el") ;; desktop package for saving buffer list and window management
-(load "~/.emacs.d/lisp/init-dired.el") ;; dired, ibuffer, etc. for file management
-
-;; utilities
+;; extensions
+(load "~/.emacs.d/lisp/init-desktop.el")        ; desktop package for saving buffer list and window management
+(load "~/.emacs.d/lisp/init-dired.el")          ; dired, ibuffer, etc. for file management
 (load "~/.emacs.d/lisp/init-swiss-knife.el")
+(load "~/.emacs.d/lisp/init-helm.el")
 
 ;; mode configs
 (load "~/.emacs.d/lisp/init-shell-mode.el")
@@ -84,8 +82,8 @@
 (load "~/.emacs.d/lisp/init-lisp-mode.el")
 (load "~/.emacs.d/lisp/init-cc-mode.el")
 (load "~/.emacs.d/lisp/init-ess-mode.el")
-(load "~/.emacs.d/lisp/init-python-mode.el") ;; with elpy
-;; (load "~/.emacs.d/lisp/init-matlab-mode.el") ;; matlab-emacs make failed
-;; (load "~/.emacs.d/lisp/init-css-mode.el") ;; comment out because GNU ELPA unavilable to install rainbow-mode
+(load "~/.emacs.d/lisp/init-python-mode.el")    ; Use elpy
+;; (load "~/.emacs.d/lisp/init-matlab-mode.el") ; matlab-emacs make failed
+;; (load "~/.emacs.d/lisp/init-css-mode.el")    ; comment out because GNU ELPA unavilable to install rainbow-mode
 
 
