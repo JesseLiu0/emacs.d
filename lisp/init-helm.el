@@ -30,10 +30,26 @@
 ;; Rebind C-x b (default: switch-to-buffer) with helm-mini.
 (global-set-key (kbd "C-x b") 'helm-mini)
 
+;; Rebind C-x C-f (default: find-file) with helm-find-files.
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+;; Bind helm-occur to short keys (default: <prefix> M-s o)
+(global-set-key (kbd "C-c h o") 'helm-occur)
+
+;; Rebind helm-persistent-action and helm-select-action for more convenient use of TAB
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebihnd tab to do persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 
+;; helm-grep-mode key bindings for easier navigation
+(define-key helm-grep-mode-map (kbd "<return>")  'helm-grep-mode-jump-other-window)
+(define-key helm-grep-mode-map (kbd "n")  'helm-grep-mode-jump-other-window-forward)
+(define-key helm-grep-mode-map (kbd "p")  'helm-grep-mode-jump-other-window-backward)
+
+;; Enable man page at point
+(add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
+
+;; Use curl for Google suggest
 (when (executable-find "curl")
   (setq helm-google-suggest-use-curl-p t))
 
