@@ -36,6 +36,9 @@
 ;; Bind helm-occur to short keys (default: <prefix> M-s o)
 (global-set-key (kbd "C-c h o") 'helm-occur)
 
+;; Rebind helm-all-mark-rings to C-h SPC (default: <prefix> C-c SPC).
+(global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
+
 ;; Rebind helm-persistent-action and helm-select-action for more convenient use of TAB
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebihnd tab to do persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
