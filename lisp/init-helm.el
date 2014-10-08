@@ -39,6 +39,12 @@
 ;; Rebind helm-all-mark-rings to C-h SPC (default: <prefix> C-c SPC).
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 
+;; Rebind helm-register to C-c h x (default: <prefix C-x r i).
+(global-set-key (kbd "C-c h x") 'helm-register)
+
+;; Rebind helm-google-suggest to C-c h g (default: <prefix> C-c g).
+(global-set-key (kbd "C-c h g") 'helm-google-suggest)
+
 ;; Rebind helm-persistent-action and helm-select-action for more convenient use of TAB
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebihnd tab to do persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
