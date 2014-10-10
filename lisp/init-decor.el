@@ -26,7 +26,7 @@
  ((equal system-type 'darwin)
   (add-to-list 'default-frame-alist '(font . "Monaco-13")))
  ((equal system-type 'windows-nt)
-  (add-to-list 'default-frame-alist '(font . "Monaco-10")))
+  (add-to-list 'default-frame-alist '(font . "Inconsolata-12")))
  )
 
 
