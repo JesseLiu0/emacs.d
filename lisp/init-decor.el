@@ -22,7 +22,7 @@
 ;;
 (cond
  ((equal system-type 'gnu/linux)
-  (add-to-list 'default-frame-alist '(font . "Courier-13")))
+  (add-to-list 'default-frame-alist '(font . "Monaco-11")))
  ((equal system-type 'darwin)
   (add-to-list 'default-frame-alist '(font . "Monaco-13")))
  ((equal system-type 'windows-nt)
