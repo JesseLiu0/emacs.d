@@ -4,7 +4,7 @@
 ;;
 ;; init-appearance.el
 ;;
-;; Copyright (C) 2013-2014 Nolan Liu
+;; Copyright reserved. 2013-2014 Nolan Liu
 ;; 
 ;; Description: default fonts, color theme, font zoom, etc.
 ;; Author: Nolan Liu (eenliu@gmail.com)
@@ -22,12 +22,12 @@
 ;;
 (cond
  ((equal system-type 'gnu/linux)
-  (set-face-attribute 'default nil :font "Monaco-11"))
+ (add-to-list 'default-frame-alist '(font . "Monaco-11")))
  ((equal system-type 'darwin)
-  (set-face-attribute 'default nil :font "Monaco-13"))
+ (add-to-list 'default-frame-alist '(font . "Monaco-13")))
  ((equal system-type 'windows-nt)
-  ;; (set-face-attribute 'default nil :font "Menlo-11"))
-  (set-face-attribute 'default nil :font "Monaco-10"))
+ (add-to-list 'default-frame-alist '(font . "Monaco-10")))
+ ;;(add-to-list 'default-frame-alist '(font . "Menlo-11")))
  )
 
 
@@ -55,7 +55,6 @@
 ;;(add-hook 'text-mode-hook 'my-buffer-face-mode-variable)
 
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; color theme
 ;;
@@ -70,3 +69,21 @@
 (color-theme-tango-light)
 ;;  ;; (color-theme-tty-dark))
 ;;  (color-theme-tango))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Set startup frame size and position.
+;;
+;; Windows
+(if (eq system-type 'windows-nt)
+    (add-to-list 'default-frame-alist '(fullscreen . fullboth)))
+    ;; (toggle-frame-fullscreen) ; F11
+
+;; OSX or Linux
+(when (or (eq system-type 'darwin) (eq system-type 'gnu/linux))
+ (progn
+ (add-to-list 'default-frame-alist '(height . 60))
+ (add-to-list 'default-frame-alist '(width . 120))
+ (add-to-list 'default-frame-alist '(left . 480))
+ (add-to-list 'default-frame-alist '(top . 0))
+ ))

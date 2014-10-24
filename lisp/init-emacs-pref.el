@@ -102,11 +102,6 @@
  '(vc-handled-backends ())
  )
 
-;; Fullscreen
- ;; (toggle-frame-fullscreen)  ; F11
- (add-to-list 'default-frame-alist '(fullscreen . fullboth)) 
-
-
 ;; use y or n instead of yes or not
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -119,8 +114,6 @@
         ;; limit the file size on which font-lock works
         (setq font-lock-maximum-size 50000)))
 
-
-
 ;; Enable "set-goal-column (C-x C-n)"
 (put 'set-goal-column 'disabled -1)
 
@@ -130,7 +123,6 @@
 ;; Enable "downcase-region (C-x C-l)"
 (put 'downcase-region 'disabled -1)
 
-
 ;; Enable narrow-to-region
 (put 'narrow-to-region 'disabled -1)
 
@@ -138,10 +130,8 @@
 ;; (included in Debian "emacs-goodies-el" package)
 ;;(shell-command-completion-mode)
 
-
 ;; auto save prefix (directory)
 (setq auto-save-list-file-prefix "~/.emacs.d/cache/auto-save-list/.saves-")
-
 
 ;;Place all backup copies of files in a common location
 (defconst use-backup-dir t)   
@@ -152,15 +142,12 @@
       delete-old-versions t            ; Ask to delete excess backup versions?
       backup-by-copying-when-linked t) ; Copy linked files, don't rename.
 
-
 ;; recentf-save-file location. After 24.4.
 (setq recentf-save-file "~/.emacs.d/cache/recentf")
-
 
 ;; Show newlines at end of file
 (define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0])
 (set-default 'indicate-empty-lines nil)
-
 
 ;; Enable uniquify
 (require 'uniquify) ;; Emacs 24 built-in
