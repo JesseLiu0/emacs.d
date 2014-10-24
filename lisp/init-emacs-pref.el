@@ -1,14 +1,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; rc-emacs-pref.el
+;; init-emacs-pref.el
 ;;
-;; Copyright (C) 2013 Eric N. Liu
+;; Copyright (C) 2013-2014 Nolan Liu
 ;; 
 ;; Description: Customizing Emacs preferences and apperance.
-;; Author: Eric N. Liu (eenliu@gmail.com)
+;; Author: Nolan Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.1
+;; Version: 0.5
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -101,6 +101,10 @@
  ;; disable version control backend as opening a GIT repo file is really slow
  '(vc-handled-backends ())
  )
+
+;; Fullscreen
+ ;; (toggle-frame-fullscreen)  ; F11
+ (add-to-list 'default-frame-alist '(fullscreen . fullboth)) 
 
 
 ;; use y or n instead of yes or not

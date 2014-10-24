@@ -4,10 +4,10 @@
 ;;
 ;; init.el
 ;;
-;; Copyright (C) 2013-2014 Ning Liu
+;; Copyright (C) 2013-2014 Nolan Liu
 ;; 
 ;; Description: Emacs init.
-;; Author: Ning Liu (eenliu@gmail.com)
+;; Author: Nolan Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
 ;; Version: 0.5
@@ -50,7 +50,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; set init file for custom settings
+;; Set init file for custom settings.
 ;;
 (setq custom-file "~/.emacs.d/lisp/init-emacs-custom.el")
 (load custom-file)
@@ -58,7 +58,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; Load RCs
+;; Load configurations.
 ;;
 
 ;; elpa package management
@@ -67,7 +67,7 @@
 ;; basic preferences
 (load "~/.emacs.d/lisp/init-emacs-pref.el")     ; Emacs Preferences
 (load "~/.emacs.d/lisp/init-key-bindings.el")   ; key bindings
-(load "~/.emacs.d/lisp/init-decor.el")          ; fonts, color-theme, font zoom, etc.
+(load "~/.emacs.d/lisp/init-appearance.el")          ; fonts, color-theme, font zoom, etc.
 (load "~/.emacs.d/lisp/init-server-windows.el") ; Set up server mode on Windows.
 
 ;; extensions
