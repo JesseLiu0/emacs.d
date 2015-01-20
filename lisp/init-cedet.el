@@ -28,7 +28,8 @@
 ;; Built-in CEDET 2.0 is automatically loaded on start.
 (load-file "~/.emacs.d/site-lisp/cedet/cedet-devel-load.el")
 ;; Load CEDET CONTRIB.
-(load-file "~/.emacs.d/site-lisp/cedet/contrib/cedet-contrib-load.elc")
+(load-file "~/.emacs.d/site-lisp/cedet/contrib/cedet-contrib-load.el")
+(load-file "~/.emacs.d/site-lisp/cedet/contrib/cedet-contrib.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
