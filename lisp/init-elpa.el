@@ -1,14 +1,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; rc-elpa.el
+;; init-elpa.el
 ;;
-;; Copyright (C) 2013-2014 N. Liu
+;; Copyright (C) 2013-2014 Ning Liu
 ;;
 ;; Description: Config ELPA, install missing packages, and initilize them.
-;; Author: Tony Liu (eenliu@gmail.com)
+;; Author: Ning Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.1
+;; Version: 0.2
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -34,7 +34,7 @@
 			 ))
 
 (defvar prelude-packages
-  '(magit helm projectile helm-projectile helm-gtags company company-c-headers function-args elpy ess ess-R-data-view yasnippet sr-speedbar iedit ctable autopair color-theme column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler volatile-highlights whole-line-or-region)
+  '(darcula-theme zenburn-theme elpy ess ess-R-data-view magit helm helm-projectile helm-gtags company company-c-headers function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler whole-line-or-region volatile-highlights)
   "A list of packages to ensure are installed at launch.")
 
 ;; rainbow-mode rainbow-delimiters not installed because GNU unavailable

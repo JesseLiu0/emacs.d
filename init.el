@@ -56,15 +56,15 @@
 (load custom-file)
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Load configurations.
-;;
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;;
+;; ;; Load configurations.
+;; ;;
 
-;; elpa package management
+;; ;; elpa package management
 (load "~/.emacs.d/lisp/init-elpa.el")
 
-;; basic preferences
+;; ;; basic preferences
 (load "~/.emacs.d/lisp/init-emacs-pref.el")     ; Emacs Preferences
 (load "~/.emacs.d/lisp/init-key-bindings.el")   ; key bindings
 (load "~/.emacs.d/lisp/init-appearance.el")          ; fonts, color-theme, font zoom, etc.
@@ -84,6 +84,3 @@
 (load "~/.emacs.d/lisp/init-ess-mode.el")
 (load "~/.emacs.d/lisp/init-python-mode.el")    ; Use elpy
 ;; (load "~/.emacs.d/lisp/init-matlab-mode.el") ; matlab-emacs make failed
-;; (load "~/.emacs.d/lisp/init-css-mode.el")    ; comment out because GNU ELPA unavilable to install rainbow-mode
-
-

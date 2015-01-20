@@ -4,16 +4,14 @@
 ;;
 ;; init-appearance.el
 ;;
-;; Copyright reserved. 2013-2014 Nolan Liu
+;; Copyright reserved. 2013-2014 Ning Liu
 ;; 
 ;; Description: default fonts, color theme, font zoom, etc.
-;; Author: Nolan Liu (eenliu@gmail.com)
+;; Author: Ning Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
 ;; Version: 0.5
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -58,15 +56,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; color theme
 ;;
-;;--- use Emacs 24 built-in tango ---;;
-;; (load-theme 'tango t)
-;;
+;;--- use Emacs 24 built-in theme ---;;
+(load-theme 'darcula t)
+;; 
 ;;--- use customized tango---;;
 ;(require 'color-theme) ;; unnecessary if installed with elpa
 ;(color-theme-initialize) ;; unnecessary if installed with elpa
-(load-library "~/.emacs.d/lisp/init-tango-theme-custom")
+;(load-library "~/.emacs.d/lisp/init-tango-theme-custom")
 ;;(if (window-system)
-(color-theme-tango-light)
+;(color-theme-tango-light)
 ;;  ;; (color-theme-tty-dark))
 ;;  (color-theme-tango))
 

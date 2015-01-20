@@ -2,105 +2,107 @@
 ;;
 ;; init-emacs-pref.el
 ;;
-;; Copyright (C) 2013-2014 Nolan Liu
+;; Copyright (C) 2013-2015 Ning Liu
 ;; 
 ;; Description: Customizing Emacs preferences and apperance.
-;; Author: Nolan Liu (eenliu@gmail.com)
+;; Author: Ning Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.5
+;; Version: 0.6
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
 ;; set start-up folder
-;;
 (setq default-directory "~")
 
+;; scroll one line at a time (less "jumpy" than defaults)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+(setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Common preferences
-;;
-(custom-set-variables
- ;; disable welcome message
- '(inhibit-startup-message t)
- '(inhibit-startup-echo-area-message t)
- '(initial-scratch-message "") 
+;; disable toolbar, scrollbars and menu bar
+(tool-bar-mode -1)
+(scroll-bar-mode t)
+;; (menu-bar-mode -1)
 
- ;; Format the title-bar to always include the buffer name
- ;;(setq frame-title-format "Emacs - %b")
- '(frame-title-format "%b")
+;; disable welcome message
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message t)
+(setq initial-scratch-message "Emacs started successfully.") 
 
- ;; Line numbering
- ;'(linum-format "%4d")
- ;'(global-linum-mode t)
+;; Format the title-bar to always include the buffer name
+;;(setq frame-title-format "Emacs - %b")
+(setq frame-title-format "%b")
 
- ;; Scroll line by line
- '(scroll-step 1)
+;; Line numbering
+(setq linum-format "%4d")
+(global-linum-mode t)
 
- ;; disable toolbar, scrollbars and menu bar
- (tool-bar-mode -1)
- '(scroll-bar-mode t)
- ;; (menu-bar-mode -1)
+;; Transient Mark mode (Highlight marked region) is enabled in Delete Selection mode.
+(delete-selection-mode t)   
 
- ;; Transient Mark mode (Highlight marked region) is enabled in Delete Selection mode.
- '(delete-selection-mode t)   
+;; Highlight current line
+(global-hl-line-mode 1)
 
- ;; Highlight current line
- '(global-hl-line-mode 1)
+;; Columns
+(column-number-mode t)
+(setq fill-column 90)
 
- ;; Columns
- '(column-number-mode t)
- '(fill-column 90)
+;; Auto fill without keep hitting M-q
+(auto-fill-mode t)
 
- ;; Auto fill without keep hitting M-q
- '(auto-fill-mode t)
+;; C-k at the very beginning of a line kills the entire line including the following newline. 
+(setq kill-whole-line t)
 
- ;; C-k at the very beginning of a line kills the entire line including the following newline. 
- '(kill-whole-line t)
+;; Don't add newlines to end of buffer when scrolling (C-n) to the last line.
+(setq next-line-add-newlines nil)
 
- ;; Don't add newlines to end of buffer when scrolling (C-n) to the last line.
- '(next-line-add-newlines nil)
+;; Always end a file with a newline
+(setq require-final-newline t)
 
- ;; Always end a file with a newline
- '(require-final-newline t)
+;; Show Paren mode for parenthesis matching
+(show-paren-mode t)
+(setq show-paren-delay 0)           ; how long to wait?
+(setq show-paren-style 'mixed) ; optionss are 'parenthesis','expression' and 'mixed'
 
- ;; Parenthesis matching
- '(show-paren-mode t)
- '(show-paren-delay 0)           ; how long to wait?
- '(show-paren-style 'mixed) ; optionss are 'parenthesis','expression' and 'mixed'
+;; flash instead of that annoying bell
+(setq visible-bell t)
 
- ;; flash instead of that annoying bell
- '(visible-bell t)
+;; Display time
+(display-time-mode t)
 
- ;; Display time
- '(display-time-mode t)
+;;Never put tabs in files, use spaces instead
+;;Note: Use C-q C-i to put a real tab should the need ever arise.
+(setq-default indent-tabs-mode nil)
 
- ;;Never put tabs in files, use spaces instead
- ;;Note: Use C-q C-i to put a real tab should the need ever arise.
- '(indent-tabs-mode -1)
+;; Save bookmarks to file regularly
+(setq bookmark-save-flag 1)
 
- ;; Save bookmarks to file regularly
- '(bookmark-save-flag 1)
+;;Allow fetching files from HTTP servers
+(url-handler-mode t)
+(setq url-cookie-file "~/.emacs.d/cache/url/cookies")
 
- ;;Allow fetching files from HTTP servers
- '(url-handler-mode t)
- '(url-cookie-file "~/.emacs.d/cache/url/cookies")
+;;TRAMP should default to ssh
+(setq tramp-default-method "ssh")
 
- ;;TRAMP should default to ssh
- '(tramp-default-method "ssh")
+;; !!! not working with emacs --daemon !!!
+;; delete files to ~/.Trash/
+(setq delete-by-moving-to-trash t)
 
- ;; !!! not working with emacs --daemon !!!
- ;; delete files to ~/.Trash/
- '(delete-by-moving-to-trash t)
+;; Brew install a trash tool for Mac OSX.
+;; See: http://www.emacswiki.org/emacs/SystemTrash
+(defun system-move-file-to-trash (file)
+  "Use \"trash\" to move FILE to the system trash.
+When using Homebrew, install it using \"brew install trash\"."
+  (call-process (executable-find "trash")
+		nil 0 nil
+		file))
 
- ;; disable version control backend as opening a GIT repo file is really slow
- '(vc-handled-backends ())
- )
+;; disable version control backend as opening a GIT repo file is really slow
+(setq vc-handled-backends ())
 
 ;; use y or n instead of yes or not
 (fset 'yes-or-no-p 'y-or-n-p)
