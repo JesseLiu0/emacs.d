@@ -34,10 +34,9 @@
 			 ))
 
 (defvar prelude-packages
-  '(darcula-theme zenburn-theme elpy ess ess-R-data-view magit helm helm-projectile helm-gtags company company-c-headers function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler whole-line-or-region volatile-highlights)
+  '(darcula-theme zenburn-theme elpy ess ess-R-data-view magit helm helm-projectile helm-gtags company company-c-headers function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell)
   "A list of packages to ensure are installed at launch.")
 
-;; rainbow-mode rainbow-delimiters not installed because GNU unavailable
 
 (defun prelude-packages-installed-p ()
   (loop for p in prelude-packages

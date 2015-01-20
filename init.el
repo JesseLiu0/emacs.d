@@ -14,6 +14,30 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; elpa package management
+(load "~/.emacs.d/lisp/init-elpa.el")
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Paths for libraries and executables
+;; Note: Keep every emacs library underneath ~/.emacs.d and 
+;;   shun loading them from the system paths. This makes it 
+;;   easier to use this config on multiple systems.
+;;
+;; (push "~/.emacs.d" load-path)
+;;
+;; recursively add the sub-directories to load-path
+(let ((default-directory "~/.emacs.d/site-lisp/"))
+  (normal-top-level-add-subdirs-to-load-path))
+;;
+;; Steve Purcell's script 'exec-path-from-shell' to set Emacs' `exec-path'
+;; and $PATH from the shell path, so that `shell-command', `compile' and
+;; the like work as expected.
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -26,45 +50,17 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; Set system environment variables
-;;
-(when (equal system-type 'darwin)
-  (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
-  (push "/usr/local/bin" exec-path)
-  )
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Library Paths
-;; Note: Keep every emacs library underneath ~/.emacs.d and 
-;;   shun loading them from the system paths. This makes it 
-;;   easier to use this config on multiple systems.
-;;
-;; (push "~/.emacs.d" load-path)
-;;
-;; recursively add the sub-directories to load-path
-(let ((default-directory "~/.emacs.d/site-lisp/"))
-  (normal-top-level-add-subdirs-to-load-path))
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Set init file for custom settings.
+;; Define the custom-file that contains menu-saved settings.
 ;;
 (setq custom-file "~/.emacs.d/lisp/init-emacs-custom.el")
 (load custom-file)
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; ;;
-;; ;; Load configurations.
-;; ;;
-
-;; ;; elpa package management
-(load "~/.emacs.d/lisp/init-elpa.el")
-
-;; ;; basic preferences
+;;
+;; Config scripts for preferences, tools, and modes.
+;;
+;; basic preferences
 (load "~/.emacs.d/lisp/init-emacs-pref.el")     ; Emacs Preferences
 (load "~/.emacs.d/lisp/init-key-bindings.el")   ; key bindings
 (load "~/.emacs.d/lisp/init-appearance.el")          ; fonts, color-theme, font zoom, etc.
