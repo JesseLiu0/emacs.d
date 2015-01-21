@@ -34,7 +34,7 @@
 			 ))
 
 (defvar prelude-packages
-  '(darcula-theme zenburn-theme elpy ess ess-R-data-view magit helm helm-projectile helm-gtags company company-c-headers function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell)
+  '(darcula-theme zenburn-theme elpy ess ess-R-data-view magit p4 helm helm-projectile helm-gtags company company-c-headers function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell)
   "A list of packages to ensure are installed at launch.")
 
 
