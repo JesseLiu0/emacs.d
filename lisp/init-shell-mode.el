@@ -2,26 +2,34 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; rc-shell-mode.el
+;; init-shell-mode.el
 ;;
-;; Copyright (C) 2013 Eric N. Liu
+;; Copyright (C) 2013-2015 Ning Liu
 ;; 
 ;; Description: config shell mode
-;; Author: Eric N. Liu (eenliu@gmail.com)
+;; Author: Ning Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.1
+;; Version: 0.2
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 
 
 
-;; Fix colors (like ls --color, etc)
+;; Interpret and use ansi color codes in shell output windows. Fix colors (like ls --color, etc)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
 
 ;;Make the prompt read only
 (setq comint-prompt-read-only t)
+
+(setq comint-scroll-to-bottom-on-input t)  ; always insert at the bottom
+(setq comint-scroll-to-bottom-on-output t) ; always add output at the bottom
+(setq comint-scroll-show-maximum-output t) ; scroll to show max possible output
+(setq comint-completion-autolist t)        ; show completion list when ambiguous
+(setq comint-input-ignoredups t)           ; no duplicates in command history
+(setq comint-completion-addsuffix t)       ; insert space/slash after file completion
+
 
 ;; (define-key comint-mode-map [(meta p)]
 ;;   'comint-previous-matching-input-from-input)
@@ -33,10 +41,14 @@
 ;;    'comint-previous-input)
 
 
-;; In term or ansi-term mode, disable autopair because its bug remaps the return key to an autopair function
-;; http://lukeshu.ath.cx/1/wordpress/2011/08/fixing-wrong-type-argument-characterp-return-in-emacs/
-(add-hook 'term-mode-hook
-	  '(lambda () (autopair-mode -1)))
-
-
 (setq eshell-directory-name "~/.emacs.d/cache/eshell")
+
+(if (eq system-type 'windows-nt)
+    (progn 
+      (setq explicit-shell-file-name "C:/apps/msysgit/bin/bash.exe")
+      (setq shell-file-name explicit-shell-file-name)
+      (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
+      (add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
+      (add-to-list 'exec-path "C:/apps/msysgit/bin") ;support shell-command
+      )
+  )    
