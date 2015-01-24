@@ -88,18 +88,25 @@
 ;;TRAMP should default to ssh
 (setq tramp-default-method "ssh")
 
+;; Move files to system trash for deleting.
 ;; !!! not working with emacs --daemon !!!
 ;; delete files to ~/.Trash/
 (setq delete-by-moving-to-trash t)
-
-;; Brew install a trash tool for Mac OSX.
+;; specify certain files that should skip the system trash.
+;; Otherwise, emacs will fill your trash directory with countless
+;; backup files and other temp files.
+(setq system-trash-exclude-matches '("#[^/]+#$" ".*~$" "\\.emacs\\.desktop.*"))
+(setq system-trash-exclude-paths '("/tmp" "C:\\Temp"))
+;; Mac OSX support.
+;; Use the tool "trash" to move FILE to the system trash on OS X.
 ;; See: http://www.emacswiki.org/emacs/SystemTrash
-(defun system-move-file-to-trash (file)
-  "Use \"trash\" to move FILE to the system trash.
-When using Homebrew, install it using \"brew install trash\"."
-  (call-process (executable-find "trash")
-		nil 0 nil
-		file))
+;; When using Homebrew, install it using \"brew install trash\"."
+(if (eq system-type 'darwin)
+    (defun system-move-file-to-trash (file)
+      (call-process (executable-find "trash")
+                    nil 0 nil
+                    file))
+)
 
 ;; disable version control backend as opening a GIT repo file is really slow
 (setq vc-handled-backends ())
