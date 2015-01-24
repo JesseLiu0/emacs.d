@@ -35,19 +35,20 @@
 (if (eq system-type 'windows-nt)
     (setq elpy-rpc-python-command "pythonw"))
 
-;; elpy-default-minor-modes
-;; Do not need to add yas-minor-mode as yas-global-mode is enabled.
-(setq elpy-default-minor-modes (quote (flymake-mode eldoc-mode highlight-indentation-mode)))
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; highlight-indentation is called by elpy
 ;; highlight-indentation-mode displays guidelines indentation (space indentation only).
 ;; highlight-indentation-current-column-mode displays guidelines for the current-point indentation (space indentation only).
 ;;
-(set-face-background 'highlight-indentation-face "#e3e3d3")
-(set-face-background 'highlight-indentation-current-column-face "#c3b3b3")
+
+;; (set-face-background 'highlight-indentation-face "#e3e3d3")
+;; (set-face-background 'highlight-indentation-current-column-face "#c3b3b3")
+(set-face-background 'highlight-indentation-face "#282828")
+(set-face-background 'highlight-indentation-current-column-face "#383838")
+
+;; Turned off highlight-indentation-mode by default as it is distracting.
+;;(add-hook 'elpy-mode-hook (lambda () (highlight-indentation-mode -1)))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
