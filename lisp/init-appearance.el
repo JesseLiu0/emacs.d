@@ -14,6 +14,27 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; color theme
+;;
+;;--- use Emacs 24 built-in theme ---;;
+(load-theme 'darcula t)
+;; 
+;;--- use customized tango---;;
+;(require 'color-theme) ;; unnecessary if installed with elpa
+;(color-theme-initialize) ;; unnecessary if installed with elpa
+;(load-library "~/.emacs.d/lisp/init-tango-theme-custom")
+;;(if (window-system)
+;(color-theme-tango-light)
+;;  ;; (color-theme-tty-dark))
+;;  (color-theme-tango))
+;;
+;;--- Customize faces ---;;
+;;
+;; Set selection region facesa
+(set-face-attribute 'region nil :background "#666" :foreground "#f5deb3")
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; Set default font
@@ -51,22 +72,6 @@
 (add-hook 'Info-mode-hook 'my-buffer-face-mode-variable)
 (add-hook 'TeX-mode-hook 'my-buffer-face-mode-variable)
 ;;(add-hook 'text-mode-hook 'my-buffer-face-mode-variable)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; color theme
-;;
-;;--- use Emacs 24 built-in theme ---;;
-(load-theme 'darcula t)
-;; 
-;;--- use customized tango---;;
-;(require 'color-theme) ;; unnecessary if installed with elpa
-;(color-theme-initialize) ;; unnecessary if installed with elpa
-;(load-library "~/.emacs.d/lisp/init-tango-theme-custom")
-;;(if (window-system)
-;(color-theme-tango-light)
-;;  ;; (color-theme-tty-dark))
-;;  (color-theme-tango))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
