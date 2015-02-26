@@ -2,29 +2,23 @@
 ;;
 ;; init-elpa.el
 ;;
-;; Copyright (C) 2013-2014 Ning Liu
+;; Copyright (C) 2013-2015 Ning Liu
 ;;
 ;; Description: Config ELPA, install missing packages, and initilize them.
 ;; Author: Ning Liu (eenliu@gmail.com)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.2
+;; Version: 0.5
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+;; Note: for Emacs 25, package-selected-packages must be defined in custom-file
+;; before this file is loaded.
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
+
 ;; initialize packages
-;;
 (package-initialize)
 
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Following check package installation and install missing packages
-;;
-(require 'cl)
 
 ;; Add a larger package list
 (setq package-archives '(
@@ -33,10 +27,12 @@
 ;;			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ))
 
-(defvar prelude-packages
-  '(darcula-theme zenburn-theme elpy ess ess-R-data-view matlab-mode magit p4 helm helm-projectile helm-gtags company company-c-headers function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell)
-  "A list of packages to ensure are installed at launch.")
 
+;; Following check package installation and install missing packages
+(require 'cl)
+
+(defvar prelude-packages package-selected-packages   ;; the latter defined in custom-file
+  "A list of packages to ensure installed at launch.")
 
 (defun prelude-packages-installed-p ()
   (loop for p in prelude-packages

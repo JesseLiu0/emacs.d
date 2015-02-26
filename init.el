@@ -16,6 +16,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
+;; Define the custom-file that contains menu-saved settings.
+;;
+(setq custom-file "~/.emacs.d/lisp/init-emacs-custom.el")
+(load custom-file)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
 ;; elpa package management
 (load "~/.emacs.d/lisp/init-elpa.el")
 
@@ -46,14 +54,6 @@
 ;; This must be loaded at the beginning to prevent built-in CEDET loading.
 ;;
 (load "~/.emacs.d/lisp/init-cedet.el")
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Define the custom-file that contains menu-saved settings.
-;;
-(setq custom-file "~/.emacs.d/lisp/init-emacs-custom.el")
-(load custom-file)
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
