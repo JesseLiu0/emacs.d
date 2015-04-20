@@ -18,14 +18,27 @@
 ;;
 ;; Define the custom-file that contains menu-saved settings.
 ;;
-(setq custom-file "~/.emacs.d/lisp/init-emacs-custom.el")
+(defvar my-packages
+  '(darcula-theme zenburn-theme elpy ess ess-R-data-view matlab-mode magit helm helm-projectile helm-gtags company company-c-headers function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell)
+  "A list of packages needed and installed by ELPA.")
+
+(if (<= emacs-major-version 24)
+    (progn
+      (setq custom-file "~/.emacs.d/lisp/init-emacs-custom.el")  ;; Emacs 24
+      (defvar package-selected-packages my-packages "Definition to be compatible with Emacs 25.")
+      )
+  (setq custom-file "~/.emacs.d/lisp/init-emacs-custom-25.el") ;; Emacs 25
+  )
 (load custom-file)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; elpa package management
-(load "~/.emacs.d/lisp/init-elpa.el")
+(if (<= emacs-major-version 24)
+    (load "~/.emacs.d/lisp/init-elpa.el")
+  (load "~/.emacs.d/lisp/init-elpa-25.el")
+  )
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
