@@ -35,10 +35,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; elpa package management
-(if (<= emacs-major-version 24)
-    (load "~/.emacs.d/lisp/init-elpa.el")
-  (load "~/.emacs.d/lisp/init-elpa-25.el")
-  )
+(load "~/.emacs.d/lisp/init-elpa.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
