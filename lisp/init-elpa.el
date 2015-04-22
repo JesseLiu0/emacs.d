@@ -12,10 +12,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
-;; Note: for Emacs 25, package-selected-packages must be defined in custom-file
-;; before this file is loaded.
-
-
 ;; initialize packages
 (package-initialize)
 
@@ -31,7 +27,8 @@
 ;; Following check package installation and install missing packages
 (require 'cl)
 
-(defvar prelude-packages package-selected-packages   ;; the latter defined in custom-file
+(defvar prelude-packages
+  '(darcula-theme zenburn-theme elpy ess ess-R-data-view matlab-mode magit helm helm-projectile helm-gtags company company-c-headers function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region flymake-cursor pabbrev smart-operator tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell)
   "A list of packages to ensure installed at launch.")
 
 (defun prelude-packages-installed-p ()
