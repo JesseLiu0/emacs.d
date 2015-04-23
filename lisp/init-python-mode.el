@@ -29,7 +29,7 @@
 ;; Use IPython as interactive environment
 (when (executable-find "ipython")
   (elpy-use-ipython))
-(setq python-shell-interpreter-args "--matplotlib=qt --pprint")
+(setq python-shell-interpreter-args "console --matplotlib=qt")
 
 ;; Fine tuning editing behavior
 (define-key python-mode-map (kbd "RET")
