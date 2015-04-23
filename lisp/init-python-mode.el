@@ -42,9 +42,9 @@
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
 
 ;; Use flycheck to replace flymake
-;; (when (require 'flycheck nil t)
-  ;; (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  ;; (add-hook 'elpy-mode-hook 'flycheck-mode))
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
