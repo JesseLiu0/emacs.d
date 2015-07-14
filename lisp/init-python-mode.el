@@ -28,9 +28,13 @@
 
 ;; Use IPython as interactive environment
 (when (executable-find "ipython")
-  (elpy-use-ipython))
+ (elpy-use-ipython))
+
 (if (eq system-type 'windows-nt)
-    (setq python-shell-interpreter-args "console --matplotlib=qt")
+    (setq
+;;      python-shell-interpreter "C:\\apps\\Anaconda3\\python.exe"
+     python-shell-interpreter-args "console --matplotlib=qt"
+      )
   (setq python-shell-interpreter-args "--matplotlib")
   )
 
