@@ -45,9 +45,10 @@
 
 (if (eq system-type 'windows-nt)
     (progn 
-      (setq explicit-shell-file-name "C:/apps/msysgit/bin/bash.exe")
-      (setq shell-file-name explicit-shell-file-name)
-      (setq explicit-bash.exe-args '("--noediting" "--login" "-i"))
+      (setq
+       explicit-shell-file-name "C:/apps/msysgit/bin/bash.exe"
+       explicit-bash.exe-args '("--noediting" "--login" "-i")
+       )
       (add-hook 'comint-output-filter-functions 'comint-strip-ctrl-m)
       (add-to-list 'exec-path "C:/apps/msysgit/bin") ;support shell-command
       )
