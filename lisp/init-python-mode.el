@@ -32,7 +32,7 @@
 
 (if (eq system-type 'windows-nt)
     (setq
-;;      python-shell-interpreter "C:\\apps\\Anaconda3\\python.exe"
+     python-shell-interpreter "C:\\apps\\Anaconda3\\Scripts\\ipython.exe"
      python-shell-interpreter-args "console --matplotlib=qt"
       )
   (setq python-shell-interpreter-args "--matplotlib")
