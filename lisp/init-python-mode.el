@@ -32,17 +32,23 @@
 
 (if (eq system-type 'windows-nt)
     (setq
-     python-shell-interpreter "C:\\apps\\Anaconda3\\Scripts\\ipython.exe"
-     python-shell-interpreter-args "console --matplotlib=qt"
+     python-shell-interpreter "C:\\apps\\Anaconda3\\python.exe"
+     python-shell-interpreter-args "-i C:\\apps\\Anaconda3\\Scripts\\ipython-script.py console --matplotlib=qt"
+     elpy-rpc-python-command "C:\\apps\\Anaconda3\\python.exe"
       )
   (setq python-shell-interpreter-args "--matplotlib")
   )
 
 ;; Fine tuning editing behavior
-(define-key python-mode-map (kbd "RET")
-  'newline-and-indent)
-(add-hook 'python-mode-hook
-          (lambda () (set (make-local-variable 'comment-inline-offset) 2)))
+(define-key python-mode-map (kbd "RET") 'newline-and-indent)
+
+(defun python-mode-editing ()
+  "My editing preferences for python-mode."
+  (interactive)
+  (set (make-local-variable 'comment-inline-offset) 2)
+  (setq python-indent-offset 4)
+  )
+(add-hook 'python-mode-hook 'python-mode-editing)
 
 ;; use python-mode for *.pyw and *.wsgi
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
