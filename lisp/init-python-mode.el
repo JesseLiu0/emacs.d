@@ -49,6 +49,8 @@
   )
 (add-hook 'python-mode-hook 'python-mode-editing)
 
+(add-hook 'python-mode-hook #'electric-spacing-mode)
+
 ;; use python-mode for *.pyw and *.wsgi
 (add-to-list 'auto-mode-alist '("\\.pyw\\'" . python-mode))
 (add-to-list 'auto-mode-alist '("\\.wsgi\\'" . python-mode))
