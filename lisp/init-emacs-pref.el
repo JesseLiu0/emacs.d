@@ -44,12 +44,13 @@
 ;; Transient Mark mode (Highlight marked region) is enabled in Delete Selection mode.
 (delete-selection-mode t)
 
-;; Highlight current line
-(global-hl-line-mode 1)
-;; Set any color as the background face of the current line:
-(set-face-background 'hl-line "#3e4446")
-;; To keep syntax highlighting in the current line:
-(set-face-foreground 'highlight nil)
+;; ;; Highlight current line
+;; ;; Disabled global mode for a bug. This mode makes rendering very slow when moving cursor.
+;; (global-hl-line-mode 1)
+;; ;; Set any color as the background face of the current line:
+;; (set-face-background 'hl-line "#3e4446")
+;; ;; To keep syntax highlighting in the current line:
+;; (set-face-foreground 'highlight nil)
 
 ;; Columns
 (column-number-mode t)
