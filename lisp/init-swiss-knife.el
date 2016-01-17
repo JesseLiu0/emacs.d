@@ -4,13 +4,13 @@
 ;;
 ;; init-swiss-knife.el
 ;;
-;; Copyright (C) 2013-2014 Ning Liu
+;; Copyright (C) 2013-2016 Jesse Liu
 ;; 
 ;; Description: small utilities improve user experience.
-;; Author: Ning Liu (eenliu@gmail.com)
+;; Author: Jesse Liu (jesseliu0@gmail.com)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.5
+;; Version: 1.0
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -48,14 +48,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; tabbar-ruler
-(tabbar-mode t)  ; Disable tabbar-ruler for high cpu usage.
+;;(tabbar-mode t)  ; Disable tabbar-ruler for high cpu usage.
 
-;; (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
+(setq tabbar-ruler-global-tabbar t) ; If you want tabbar
 ;; (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
 ;; (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
 ;; (setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
 ;; (setq tabbar-ruler-popup-scrollbar t) ; If you want to only show the scroll bar when your mouse is moving.
-;; (require 'tabbar-ruler)
+(require 'tabbar-ruler)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
