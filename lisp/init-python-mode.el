@@ -32,10 +32,11 @@
 
 (if (eq system-type 'windows-nt)
     (setq
-     python-shell-interpreter "C:\\apps\\Anaconda3\\python.exe"
-     python-shell-interpreter-args "-i C:\\apps\\Anaconda3\\Scripts\\ipython-script.py console --matplotlib=qt"
-     elpy-rpc-python-command "C:\\apps\\Anaconda3\\python.exe"
-      )
+     python-shell-interpreter "C:\\apps\\python35\\python.exe"
+     python-shell-interpreter-args "-i C:\\apps\\python35\\Scripts\\ipython-script.py console --matplotlib=qt"
+     elpy-rpc-python-command "C:\\apps\\python35\\python.exe"
+     )
+  (setq elpy-rpc-python-command "/usr/local/bin/python3")
   (setq python-shell-interpreter-args "--matplotlib")
   )
 
