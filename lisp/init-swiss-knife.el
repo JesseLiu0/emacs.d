@@ -7,10 +7,10 @@
 ;; Copyright (C) 2013-2016 Jesse Liu
 ;; 
 ;; Description: small utilities improve user experience.
-;; Author: Jesse Liu (jesseliu0@gmail.com)
+;; Author: Jesse Liu (jesse@liu.onl)
 ;; Keywords:
 ;; Requirements:
-;; Version: 1.0
+;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -130,3 +130,11 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; Magit for GIT
+;;
+;; Bind magit-status to C-x g
+(global-set-key (kbd "C-x g") 'magit-status)
+;; Refine diff level to word-by-word for all hunks. "t" for current hunk only.
+(setq magit-diff-refine-hunk 'all)
