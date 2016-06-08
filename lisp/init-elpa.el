@@ -28,7 +28,7 @@
 (require 'cl)
 
 (defvar prelude-packages
-  '(darcula-theme zenburn-theme elpy ein ess ess-R-data-view matlab-mode magit helm helm-projectile helm-gtags company company-c-headers flycheck function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region pabbrev electric-spacing tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell)
+  '(darcula-theme zenburn-theme elpy ein ess ess-R-data-view matlab-mode magit helm helm-projectile helm-gtags company company-c-headers flycheck function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region pabbrev electric-spacing tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell ssh-agency)
   "A list of packages to ensure installed at launch.")
 
 (defun prelude-packages-installed-p ()

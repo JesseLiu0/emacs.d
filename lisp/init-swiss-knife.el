@@ -138,3 +138,9 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 ;; Refine diff level to word-by-word for all hunks. "t" for current hunk only.
 (setq magit-diff-refine-hunk 'all)
+;; Use SSH key with OpenSSH passphrase caching (via ssh-agency package) to
+;; solve the problem that git push does not intercept password on Windows
+;; https://github.com/magit/magit/wiki/Pushing-with-Magit-from-Windows
+(when (eq system-type 'windows-nt)
+  (setenv "SSH_ASKPASS" "git-gui--askpass")
+  )
