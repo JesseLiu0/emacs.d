@@ -4,18 +4,16 @@
 ;;
 ;; rc-ess-mode.el
 ;;
-;; Copyright (C) 2013 Eric N. Liu
+;; Copyright (C) 2013-2016 Jesse Liu
 ;; 
 ;; Description: ESS for statistics languages
-;; Author: Eric N. Liu (eenliu@gmail.com)
+;; Author: Jesse Liu (jesse@liu.onl)
 ;; Keywords:
 ;; Requirements:
-;; Version: 0.1
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 
-(push "~/.emacs.d/elpa/ess-20130628.1043/lisp" load-path)
 (require 'ess-site) 
 
 ;; customize font lock in ESS mode 
