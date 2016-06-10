@@ -9,9 +9,7 @@
 ;; Description: Setup python programming environment. 
 ;;              Based on built-in python.el and elpy.
 ;; Author: Jesse Liu (jesse@liu.onl)
-;; Keywords:
-;; Requirements:
-;; Version: 1.0
+;; 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
@@ -64,3 +62,7 @@
 (when (require 'flycheck nil t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
   (add-hook 'elpy-mode-hook 'flycheck-mode))
+
+
+;; ein: Emacs Ipython Notebook
+(setq ein:default-url-or-port 8889)
