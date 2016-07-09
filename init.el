@@ -4,13 +4,9 @@
 ;;
 ;; init.el
 ;;
-;; Copyright (C) 2013-2014 Nolan Liu
+;; Copyright (C) 2013-2016 Jesse Liu
 ;; 
 ;; Description: Emacs init.
-;; Author: Nolan Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.5
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 

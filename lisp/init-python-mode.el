@@ -44,7 +44,9 @@
   "My editing preferences for python-mode."
   (interactive)
   (set (make-local-variable 'comment-inline-offset) 2)
-  )
+  (setq python-indent-offset 4)
+  (setq yas-indent-line 'fixed)
+)
 (add-hook 'python-mode-hook 'python-mode-editing)
 
 
