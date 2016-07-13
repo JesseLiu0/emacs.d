@@ -39,6 +39,9 @@
 ;; Fine tune editing behavior
 (define-key python-mode-map (kbd "RET") 'newline-and-indent)
 (add-hook 'python-mode-hook #'electric-spacing-mode)
+(add-hook 'python-mode-hook #'python-docstring-mode)
+(add-hook 'python-mode-hook #'sphinx-doc-mode)
+
 
 (defun python-mode-editing ()
   "My editing preferences for python-mode."
