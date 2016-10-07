@@ -27,9 +27,9 @@
 ;; Interpreter
 (if (eq system-type 'windows-nt)
     (setq
-     python-shell-interpreter "C:\\apps\\python\\Scripts\\ipython.exe"
+     ;; python-shell-interpreter "C:\\apps\\python\\Scripts\\ipython.exe"
      python-shell-interpreter-args "-i --matplotlib=qt5"
-     elpy-rpc-python-command "C:\\apps\\python\\python.exe"
+     ;; elpy-rpc-python-command "C:\\apps\\python\\python.exe"
      )
   (setq elpy-rpc-python-command "/usr/local/bin/python3")
   (setq python-shell-interpreter-args "--matplotlib")
