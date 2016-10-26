@@ -1,15 +1,9 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; init-cedet.el
-;;
 ;; Description:
 ;;     CEDET setup
 ;;
 ;; References:
 ;;     http://alexott.blogspot.com/2012/10/new-version-of-article-about-emacscedet.html
 ;;     http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
-;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -1,17 +1,5 @@
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; init-python-mode.el
-;;
-;; Copyright (C) 2014-2016 Jesse Liu
-;; 
-;; Description: Setup python programming environment. 
-;;              Based on built-in python.el and elpy.
-;; Author: Jesse Liu (jesse@liu.onl)
-;; 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+;; Description:
+;;     Python programming environment based on built-in python.el and elpy.
 
 
 ;; Enable elpy

@@ -1,17 +1,5 @@
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; init-cc-mode.el
-;;
-;; Copyright (C) 2013-2014 Ning Liu
-;; 
-;; Description: cc-mode setup
-;; Author: Ning Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.5
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Description:
+;;     Programming environment for C, C++, Java
 
 
 ;; cc-mode supports C, C++, Java

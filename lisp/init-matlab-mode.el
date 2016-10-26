@@ -1,17 +1,5 @@
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; init-matlab-mode.el
-;;
-;; Copyright (C) 2015 N. Liu
-;; 
-;; Description: matlab-emacs
-;; Author: N. Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.1
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Description:
+;;     Matlab
 
 
 ;; http://www.emacswiki.org/emacs/MatlabMode

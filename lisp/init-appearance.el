@@ -1,17 +1,5 @@
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; init-appearance.el
-;;
-;; Copyright reserved. 2013-2014 Ning Liu
-;; 
-;; Description: default fonts, color theme, font zoom, etc.
-;; Author: Ning Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.5
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Description:
+;;     default fonts, color theme, font zoom, etc.
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

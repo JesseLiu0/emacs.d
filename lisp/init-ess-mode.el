@@ -1,17 +1,5 @@
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; rc-ess-mode.el
-;;
-;; Copyright (C) 2013-2016 Jesse Liu
-;; 
-;; Description: ESS for statistics languages
-;; Author: Jesse Liu (jesse@liu.onl)
-;; Keywords:
-;; Requirements:
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+;; Description:
+;;     ESS for statistics languages
 
 
 (require 'ess-site) 

@@ -1,15 +1,5 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; init-helm.el
-;;
-;; Copyright (C) 2014 Ning Liu
-;; 
-;; Description: Set up Helm.
-;; Author: Ning Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.1
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Description:
+;;     Emacs framework for incremental completions and narrowing selections.
 
 
 (require 'helm-config)

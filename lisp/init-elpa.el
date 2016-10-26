@@ -1,15 +1,6 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Description:
+;;     Install specified packages and initilize them.
 ;;
-;; init-elpa.el
-;;
-;; Copyright (C) 2013-2015 Ning Liu
-;;
-;; Description: Config ELPA, install missing packages, and initilize them.
-;; Author: Ning Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.5
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;; initialize packages

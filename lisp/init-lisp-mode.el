@@ -1,19 +1,5 @@
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; rc-lisp-mode.el
-;;
-;; Copyright (C) 2013 Eric N. Liu
-;; 
-;; Description: list-mode
-;; Author: Eric N. Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.1
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
+;; Description:
+;;     Programming environment for lisp.
 
 
 ;;Make return automatically indent

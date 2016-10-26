@@ -1,26 +1,12 @@
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; rc-tango-theme-custom.el
-;;
-;; Copyright (C) 2013 Eric N. Liu
-;; 
-;; Description: Customized tango theme.
-;;              Note there are two themes in here:
-;;              color-theme-tango - 
-;;                Color theme based on Tango Palette. Created by danranx@gmail.com
-;;                http://www.emacswiki.org/cgi-bin/emacs/color-theme-tango.el
-;;                Removed italics
-;;              color-theme-tango-light -
-;;                Original theme by matt harrison, for those who prefer a light background
-;;
-;; Author: Eric N. Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.1
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Description:
+;;     Customized tango theme.
+;;     Note there are two themes in here:
+;;         color-theme-tango - 
+;;             Color theme based on Tango Palette. Created by danranx@gmail.com
+;;             http://www.emacswiki.org/cgi-bin/emacs/color-theme-tango.el
+;;             Removed italics
+;;         color-theme-tango-light -
+;;             Original theme by matt harrison, for those who prefer a light background
 
 
 ;; My colors

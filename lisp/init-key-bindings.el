@@ -1,14 +1,5 @@
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; rc-key-bindings.el
-;;
-;; Copyright (C) 2006-2014 N. Liu
-;; 
-;; Description: global key bindings
-;; Author: N. Liu (eenliu@gmail.com)
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Description:
+;;     Global key bindings
 
 
 ;; Mark-ring (bookmarks) is navigable by typing C-u C-SPC and then repeating C-SPC forever

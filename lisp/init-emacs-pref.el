@@ -1,17 +1,5 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; init-emacs-pref.el
-;;
-;; Copyright (C) 2013-2015 Ning Liu
-;; 
-;; Description: Customizing Emacs preferences and apperance.
-;; Author: Ning Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.6
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
+;; Description:
+;;     Emacs built-in preferences, apperance and behaviors.
 
 
 ;; set start-up folder

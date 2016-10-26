@@ -1,20 +1,5 @@
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; init-shell-mode.el
-;;
-;; Copyright (C) 2013-2015 Ning Liu
-;; 
-;; Description: config shell mode
-;; Author: Ning Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.2
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-
+;; Description:
+;;     Shell mode
 
 
 ;; Interpret and use ansi color codes in shell output windows. Fix colors (like ls --color, etc)
