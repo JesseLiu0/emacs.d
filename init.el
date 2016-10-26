@@ -56,7 +56,6 @@
 (load "~/.emacs.d/lisp/init-emacs-pref.el")     ; Emacs Preferences
 (load "~/.emacs.d/lisp/init-key-bindings.el")   ; key bindings
 (load "~/.emacs.d/lisp/init-appearance.el")          ; fonts, color-theme, font zoom, etc.
-(load "~/.emacs.d/lisp/init-server-windows.el") ; Set up server mode on Windows.
 
 ;; extensions
 (load "~/.emacs.d/lisp/init-desktop.el")        ; desktop package for saving buffer list and window management
