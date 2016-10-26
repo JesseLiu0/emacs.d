@@ -25,15 +25,15 @@
  (elpy-use-ipython))
 
 ;; Interpreter
-(if (eq system-type 'windows-nt)
-    (setq
+;; (if (eq system-type 'windows-nt)
+    ;; (setq
      ;; python-shell-interpreter "C:\\apps\\python\\Scripts\\ipython.exe"
-     python-shell-interpreter-args "-i --matplotlib=qt5"
+     ;; python-shell-interpreter-args "-i --matplotlib=qt5"
      ;; elpy-rpc-python-command "C:\\apps\\python\\python.exe"
-     )
-  (setq elpy-rpc-python-command "/usr/local/bin/python3")
-  (setq python-shell-interpreter-args "--matplotlib")
-  )
+     ;; )
+  ;; (setq elpy-rpc-python-command "python")
+(setq python-shell-interpreter-args "--matplotlib=qt5")
+  ;; )
 
 
 ;; Fine tune editing behavior
@@ -70,4 +70,4 @@
 
 
 ;; ein: Emacs Ipython Notebook
-(setq ein:default-url-or-port 8889)
+;; (setq ein:default-url-or-port 8889)

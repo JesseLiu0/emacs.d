@@ -1,13 +1,8 @@
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; init.el
 ;;
-;; Copyright (C) 2013-2016 Jesse Liu
-;; 
-;; Description: Emacs init.
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Description: Emacs init main entry.
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -39,15 +34,16 @@
 ;;
 ;; Steve Purcell's script 'exec-path-from-shell' to set Emacs' `exec-path'
 ;; and $PATH from the shell path, so that `shell-command', `compile' and
-;; the like work as expected.
+;; the like work as expected. For macOS only.
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; Load develpment version CEDET
-;; This must be loaded at the beginning to prevent built-in CEDET loading.
+;; Setup CEDET.
+;; If loading standalone devel version CEDET, this line must be placed
+;; at the beginning to prevent built-in CEDET loading.
 ;;
 (load "~/.emacs.d/lisp/init-cedet.el")
 

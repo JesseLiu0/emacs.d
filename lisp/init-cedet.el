@@ -2,17 +2,12 @@
 ;;
 ;; init-cedet.el
 ;;
-;; Copyright (C) 2014 Ning Liu
-;; 
-;; Description: CEDET setup
-;; Author: Ning Liu (eenliu@gmail.com)
-;; Keywords:
-;; Requirements:
-;; Version: 0.1
+;; Description:
+;;     CEDET setup
 ;;
-;; Ref:
-;; http://alexott.blogspot.com/2012/10/new-version-of-article-about-emacscedet.html
-;; http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
+;; References:
+;;     http://alexott.blogspot.com/2012/10/new-version-of-article-about-emacscedet.html
+;;     http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html
 ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -29,7 +24,7 @@
 (load-file "~/.emacs.d/site-lisp/cedet/cedet-devel-load.el")
 ;; Load CEDET CONTRIB.
 (load-file "~/.emacs.d/site-lisp/cedet/contrib/cedet-contrib-load.el")
-(load-file "~/.emacs.d/site-lisp/cedet/contrib/cedet-contrib.el")
+;;(load-file "~/.emacs.d/site-lisp/cedet/contrib/cedet-contrib.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -64,7 +59,7 @@
   (semantic-load-enable-all-exuberent-ctags-support))
 
 ;; Enable Semantic
-(semantic-mode 1)
+;; (semantic-mode 1)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -87,4 +82,3 @@
 (global-set-key [f6] 'semantic-tag-folding-show-block)
 (global-set-key (kbd "C-c f a") 'semantic-tag-folding-fold-all)
 (global-set-key (kbd "C-c f s") 'semantic-tag-folding-show-all)
-
