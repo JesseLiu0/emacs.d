@@ -53,7 +53,7 @@
   (semantic-load-enable-all-exuberent-ctags-support))
 
 ;; Enable Semantic
-;; (semantic-mode 1)
+(semantic-mode 1)
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

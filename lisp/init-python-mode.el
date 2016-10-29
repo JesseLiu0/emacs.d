@@ -12,6 +12,11 @@
 (when (executable-find "ipython")
  (elpy-use-ipython))
 
+;; Disable CEDET semantic for python-mode as it hangs
+(defun disable-semantic-mode ()
+  (semantic-mode -1))
+(add-hook 'python-mode-hook 'disable-semantic-mode)
+
 ;; Interpreter
 ;; (if (eq system-type 'windows-nt)
     ;; (setq
