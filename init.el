@@ -18,16 +18,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
-;; Paths for libraries and executables
-;; Note: Keep every emacs library underneath ~/.emacs.d and 
-;;   shun loading them from the system paths. This makes it 
-;;   easier to use this config on multiple systems.
+;; Load paths
 ;;
 ;; (push "~/.emacs.d" load-path)
 ;;
-;; recursively add the sub-directories to load-path
-(let ((default-directory "~/.emacs.d/site-lisp/"))
-  (normal-top-level-add-subdirs-to-load-path))
+;; Recursively add sub-directories to load-path
+;; (let ((default-directory "~/.emacs.d/site-lisp/"))
+;;   (normal-top-level-add-subdirs-to-load-path))
 ;;
 ;; Steve Purcell's script 'exec-path-from-shell' to set Emacs' `exec-path'
 ;; and $PATH from the shell path, so that `shell-command', `compile' and
