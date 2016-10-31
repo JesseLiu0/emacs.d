@@ -44,9 +44,3 @@
 
 (add-hook 'c-mode-hook 'my-c-c++-hook)
 (add-hook 'c++-mode-hook 'my-c-c++-hook)
-
-
-;; C++ function definitions in a header file are expanded to definitions
-;; in acorresponding source file
-(require 'member-functions)
-(setq mf--source-file-extension "cpp")
