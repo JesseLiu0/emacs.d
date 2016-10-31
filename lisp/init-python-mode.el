@@ -25,7 +25,7 @@
      ;; elpy-rpc-python-command "C:\\apps\\python\\python.exe"
      ;; )
   ;; (setq elpy-rpc-python-command "python")
-(setq python-shell-interpreter-args "--matplotlib=qt5")
+(setq python-shell-interpreter-args "--matplotlib=qt")
   ;; )
 
 
