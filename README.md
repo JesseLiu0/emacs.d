@@ -1,4 +1,4 @@
 An Emacs configuration
 =======
 
-This Emacs configuration works on Mac OS X and Windows 7.
+This Emacs configuration works on Debian and Mac, mainly customized for Python and R programming.
