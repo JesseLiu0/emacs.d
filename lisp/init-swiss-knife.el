@@ -126,3 +126,11 @@
 (global-set-key (kbd "C-x g") 'magit-status)
 ;; Refine diff level to word-by-word for all hunks. "t" for current hunk only.
 (setq magit-diff-refine-hunk 'all)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; desktop+ for session management
+;;
+(setq desktop+-base-dir "~/.emacs.d/cache/desktops")
+(setq desktop-save nil)

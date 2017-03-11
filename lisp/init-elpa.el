@@ -18,6 +18,7 @@
 	column-marker
 	company-c-headers
 	darcula-theme
+        desktop+
 	dired-efap
 	dired-details+
 	ein
