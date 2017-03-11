@@ -1,5 +1,19 @@
-;; Description:
-;;     The main entry of Emacs customizations.
+;;    My Emacs customizations.
+;;
+;;    Ning Liu
+;;    ning@liu.onl    https://github.com/ningliuio/
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; elpa package management
+
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(load "~/.emacs.d/lisp/init-elpa.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -8,12 +22,6 @@
 ;;
 (setq custom-file "~/.emacs.d/lisp/init-emacs-custom.el")
 (load custom-file)
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; elpa package management
-(load "~/.emacs.d/lisp/init-elpa.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

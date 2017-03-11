@@ -1,38 +1,64 @@
 ;; Description:
-;;     Install specified packages and initilize them.
+;;     ELPA initialization and installing all specified packages.
 ;;
-
 
 ;; initialize packages
 (package-initialize)
 
-
-;; Add a larger package list
+;; Package repos
 (setq package-archives '(
 			 ("melpa" . "http://melpa.milkbox.net/packages/")
-;;			 ("marmalade" . "http://marmalade-repo.org/packages/")
 			 ("gnu" . "http://elpa.gnu.org/packages/")
 			 ))
 
+;; Packages installed explicitly by user
+(setq package-selected-packages
+      '(ac-anaconda
+	autopair
+	column-marker
+	company-c-headers
+	darcula-theme
+	dired-efap
+	dired-details+
+	ein
+	electric-spacing
+	elpy
+	ess-R-data-view
+	ess
+	exec-path-from-shell
+	expand-region
+	flycheck
+	function-args
+	helm-gtags
+	helm-projectile
+	helm
+	magit
+	markdown-preview-mode
+	matlab-mode
+	pabbrev
+	python-docstring
+	realgud
+	sphinx-doc
+	sr-speedbar
+	tabbar-ruler
+	volatile-highlights
+	whole-line-or-region
+	))
 
-;; Following check package installation and install missing packages
+;; Check if any required package not installed
 (require 'cl)
-
-(defvar prelude-packages
-  '(darcula-theme zenburn-theme elpy ein python-docstring sphinx-doc ess ess-R-data-view matlab-mode magit helm helm-projectile helm-gtags company company-c-headers flycheck function-args yasnippet sr-speedbar autopair column-marker dired-details dired-details+ dired-efap expand-region pabbrev electric-spacing tabbar tabbar-ruler whole-line-or-region volatile-highlights exec-path-from-shell)
-  "A list of packages to ensure installed at launch.")
-
-(defun prelude-packages-installed-p ()
-  (loop for p in prelude-packages
+(defun packages-installed-p ()
+  (loop for p in package-selected-packages
         when (not (package-installed-p p)) do (return nil)
-        finally (return t)))
+	finally (return t)))
 
-(unless (prelude-packages-installed-p)
-  ;; check for new packages (package versions)
-  (message "%s" "Emacs Prelude is now refreshing its package database...")
+;; Install missing packages
+(unless (packages-installed-p)
+  ;; check for new package versions
+  (message "%s" "ELPA is refreshing package database...")
   (package-refresh-contents)
   (message "%s" " done.")
   ;; install the missing packages
-  (dolist (p prelude-packages)
+  (dolist (p package-selected-packages)
     (when (not (package-installed-p p))
       (package-install p))))
