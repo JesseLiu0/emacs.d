@@ -64,3 +64,4 @@
 
 ;; ein: Emacs Ipython Notebook
 ;; (setq ein:default-url-or-port 8889)
+(setq ein:use-auto-complete-superpack t)
