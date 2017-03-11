@@ -1,7 +1,8 @@
+;;
 ;;    My Emacs customizations.
 ;;
-;;    Ning Liu
-;;    ning@liu.onl    https://github.com/ningliuio/
+;;    Ning Liu    ning@liu.onl    https://github.com/ningliuio/
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
@@ -12,7 +13,6 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
 (package-initialize)
-
 (load "~/.emacs.d/lisp/init-elpa.el")
 
 
@@ -41,15 +41,6 @@
   (exec-path-from-shell-initialize))
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Setup CEDET.
-;; If loading standalone devel version CEDET, this line must be placed
-;; at the beginning to prevent built-in CEDET loading.
-;;
-(load "~/.emacs.d/lisp/init-cedet.el")
-
-
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;; Config scripts for preferences, tools, and modes.
@@ -60,16 +51,16 @@
 (load "~/.emacs.d/lisp/init-appearance.el")          ; fonts, color-theme, font zoom, etc.
 
 ;; extensions
-(load "~/.emacs.d/lisp/init-desktop.el")        ; desktop package for saving buffer list and window management
+(load "~/.emacs.d/lisp/init-cedet.el")          ; Move to beginning for devel version CEDET
 (load "~/.emacs.d/lisp/init-dired.el")          ; dired, ibuffer, etc. for file management
-(load "~/.emacs.d/lisp/init-swiss-knife.el")
+(load "~/.emacs.d/lisp/init-swiss-knife.el")    ; utilities
 (load "~/.emacs.d/lisp/init-helm.el")
 
 ;; mode configs
-(load "~/.emacs.d/lisp/init-shell-mode.el")
 (load "~/.emacs.d/lisp/init-text-mode.el")
 (load "~/.emacs.d/lisp/init-lisp-mode.el")
+(load "~/.emacs.d/lisp/init-shell-mode.el")
+(load "~/.emacs.d/lisp/init-python-mode.el")    ; Based on elpy
 (load "~/.emacs.d/lisp/init-cc-mode.el")
 (load "~/.emacs.d/lisp/init-ess-mode.el")
-(load "~/.emacs.d/lisp/init-python-mode.el")    ; Based on elpy
 (load "~/.emacs.d/lisp/init-matlab-mode.el")
