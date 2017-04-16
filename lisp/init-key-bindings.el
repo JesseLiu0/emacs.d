@@ -2,6 +2,14 @@
 ;;     Global key bindings
 
 
+;; Switch Command and Control on a Mac.
+(if (eq system-type 'darwin)
+    (progn
+      (setq mac-command-modifier 'control)
+      (setq mac-control-modifier 'super)
+      )
+  )
+
 ;; Mark-ring (bookmarks) is navigable by typing C-u C-SPC and then repeating C-SPC forever
 ;; Push marks to mark-ring by C-SPC C-SPC
 (setq set-mark-command-repeat-pop t)
@@ -22,15 +30,12 @@
 (global-set-key [delete] 'delete-char)
 (global-set-key [kp-delete] 'delete-char)
 
-;; use F1 and F2 to skip between buffers
-;; (global-set-key [f1] 'yic-next-buffer) ;see below CUSTOM FUNCTIONS
-;; (global-set-key [f2] 'yic-prev-buffer) ;see below CUSTOM FUNCTIONS
-
-;;use F3 key to kill buffer
-(global-set-key [f2] 'kill-this-buffer)
-
-(global-set-key [f3] 'comment-line) ;;see below CUSTOM FUNCTIONS
-(global-set-key [f4] 'uncomment-line) ;;see below CUSTOM FUNCTIONS
+;; F1-F12
+(global-set-key [f1] 'yic-next-buffer) ; F1/F2 to switch buffers. See below CUSTOM FUNCTIONS.
+(global-set-key [f2] 'yic-prev-buffer) ; F1/F2 to switch buffers. See below CUSTOM FUNCTIONS.
+(global-set-key [f3] 'comment-line) ; F3 to comment a line. See below CUSTOM FUNCTIONS.
+(global-set-key [f4] 'uncomment-line) ; F4 to uncomment a line. See below CUSTOM FUNCTIONS.
+;; (global-set-key [f6] 'kill-this-buffer) ; F6 to kill buffer. Use s-k.
 (global-set-key [f7] 'next-error)
 (global-set-key [f8] 'query-replace)
 ;;(global-set-key [f7] 'xterm-mouse-mode)
@@ -39,9 +44,9 @@
 ;;(global-set-key [f10] 'hs-show-block)
 
 ;; set "home" and "end" keys
-(global-set-key [home] 'beginning-of-line)
-(global-set-key [end] 'end-of-line)
-(global-set-key [(meta g)] 'goto-line) ;; original is M-g g. 
+;; (global-set-key [home] 'beginning-of-line)
+;; (global-set-key [end] 'end-of-line)
+;; (global-set-key [(meta g)] 'goto-line) ;; original is M-g g. Use s-l.
 
 ;; Scrolling up/down by 1 row
 (global-set-key (kbd "M-p") 'scroll-down-line)
@@ -51,16 +56,16 @@
 (global-set-key '[M-down]  'scroll-up-line)
 (global-set-key '[M-kp-2]  'scroll-up-line)
 
-(global-set-key [(control x) r j] 'bookmark-jump) ;; originally C-x r b bookmark <RET>
+;; (global-set-key [(control x) r j] 'bookmark-jump) ;; originally C-x r b bookmark <RET>
 
-;;(global-set-key [(control tab)] 'other-window)
-;;(global-set-key [(meta +)] 'enlarge-window)
+;; (global-set-key [(control tab)] 'other-window)
+;; (global-set-key [(meta +)] 'enlarge-window)
 
 ;; set mark key to C- . instead of C-@
 ;; (global-set-key (kbd "C-.") 'set-mark-command)
 
 ;Make other-frame instinctive
-(global-set-key "\C-co"	   'other-frame)
+;; (global-set-key "\C-co"	   'other-frame)
 
 ;Make dabbrev completion a little easier to hit
 (global-set-key (kbd "M-RET") 'dabbrev-expand)
