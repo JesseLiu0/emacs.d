@@ -33,16 +33,15 @@
 (delete-selection-mode t)
 
 ;; ;; Highlight current line
-;; ;; Disabled global mode for a bug. This mode makes rendering very slow when moving cursor.
+;; ;; Disabled global mode as it makes rendering very slow when moving cursor. It may be conflict with another package.
 ;; (global-hl-line-mode 1)
 ;; ;; Set any color as the background face of the current line:
 ;; (set-face-background 'hl-line "#3e4446")
 ;; ;; To keep syntax highlighting in the current line:
 ;; (set-face-foreground 'highlight nil)
-
 ;; Columns
 (column-number-mode t)
-(setq fill-column 90)
+(setq fill-column 80)
 
 ;; Auto fill without keep hitting M-q
 (auto-fill-mode t)
