@@ -50,10 +50,10 @@
 (setq kill-whole-line t)
 
 ;; Don't add newlines to end of buffer when scrolling (C-n) to the last line.
-(setq next-line-add-newlines nil)
+;; (setq next-line-add-newlines nil)
 
 ;; Always end a file with a newline
-(setq require-final-newline t)
+;; (setq require-final-newline t)
 
 ;; Show Paren mode for parenthesis matching
 (show-paren-mode t)
