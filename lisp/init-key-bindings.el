@@ -31,8 +31,8 @@
 (global-set-key [kp-delete] 'delete-char)
 
 ;; F1-F12
-(global-set-key [f1] 'yic-next-buffer) ; F1/F2 to switch buffers. See below CUSTOM FUNCTIONS.
-(global-set-key [f2] 'yic-prev-buffer) ; F1/F2 to switch buffers. See below CUSTOM FUNCTIONS.
+;; (global-set-key [f1] 'yic-next-buffer) ; F1/F2 to switch buffers. See below CUSTOM FUNCTIONS.
+;; (global-set-key [f2] 'yic-prev-buffer) ; F1/F2 to switch buffers. See below CUSTOM FUNCTIONS.
 (global-set-key [f3] 'comment-line) ; F3 to comment a line. See below CUSTOM FUNCTIONS.
 (global-set-key [f4] 'uncomment-line) ; F4 to uncomment a line. See below CUSTOM FUNCTIONS.
 ;; (global-set-key [f6] 'kill-this-buffer) ; F6 to kill buffer. Use s-k.

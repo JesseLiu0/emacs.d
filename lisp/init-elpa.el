@@ -17,6 +17,7 @@
 	autopair
 	column-marker
 	company-c-headers
+        counsel
 	darcula-theme
         desktop+
 	dired-details+
@@ -29,17 +30,15 @@
 	expand-region
 	flycheck
 	function-args  ; Requires swiper and ivy.
-	;; helm-gtags
-	;; helm-projectile
-	;; helm
+        ivy-hydra
 	magit
 	markdown-preview-mode
 	;; matlab-mode
-	;; pabbrev
 	python-docstring
 	realgud
 	sphinx-doc
 	sr-speedbar
+        swiper
 	tabbar-ruler
         undo-tree
 	volatile-highlights
