@@ -146,10 +146,6 @@
 ;; recentf-save-file location. After 24.4.
 (setq recentf-save-file "~/.emacs.d/cache/recentf")
 
-;; Show newlines at end of file
-(define-fringe-bitmap 'empty-line [0 0 #x3c #x3c #x3c #x3c 0 0])
-(set-default 'indicate-empty-lines nil)
-
 ;; Enable uniquify
 (require 'uniquify) ;; Emacs 24 built-in
 (setq uniquify-buffer-name-style 'forward)
