@@ -116,16 +116,16 @@
         (setq font-lock-maximum-size 50000)))
 
 ;; Enable "set-goal-column (C-x C-n)"
-(put 'set-goal-column 'disabled -1)
+(put 'set-goal-column 'disabled nil)
 
 ;; Enable "upcase-region (C-x C-u)"
-(put 'upcase-region 'disabled -1)
+(put 'upcase-region 'disabled nil)
 
 ;; Enable "downcase-region (C-x C-l)"
-(put 'downcase-region 'disabled -1)
+(put 'downcase-region 'disabled nil)
 
 ;; Enable narrow-to-region
-(put 'narrow-to-region 'disabled -1)
+(put 'narrow-to-region 'disabled nil)
 
 ;; shell-command - enables tab-completion for "shell-command"
 ;; (included in Debian "emacs-goodies-el" package)
