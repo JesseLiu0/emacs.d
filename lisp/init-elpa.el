@@ -13,30 +13,29 @@
 
 ;; Packages installed explicitly by user
 (setq package-selected-packages
-      '(ac-anaconda
+      '(;; ac-anaconda
 	autopair
 	column-marker
 	company-c-headers
 	darcula-theme
         desktop+
-	dired-efap
 	dired-details+
-	ein
+	;; ein
 	electric-spacing
 	elpy
-	ess-R-data-view
-	ess
+	;; ess-R-data-view
+	;; ess
 	exec-path-from-shell
 	expand-region
 	flycheck
 	function-args
-	helm-gtags
-	helm-projectile
-	helm
+	;; helm-gtags
+	;; helm-projectile
+	;; helm
 	magit
 	markdown-preview-mode
-	matlab-mode
-	pabbrev
+	;; matlab-mode
+	;; pabbrev
 	python-docstring
 	realgud
 	sphinx-doc
