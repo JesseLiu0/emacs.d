@@ -48,7 +48,7 @@
 ;; basic preferences
 (load "~/.emacs.d/lisp/init-emacs-pref.el")     ; Emacs Preferences
 (load "~/.emacs.d/lisp/init-key-bindings.el")   ; key bindings
-(load "~/.emacs.d/lisp/init-appearance.el")          ; fonts, color-theme, font zoom, etc.
+(load "~/.emacs.d/lisp/init-appearance.el")     ; fonts, color-theme, font zoom, etc.
 
 ;; extensions
 (load "~/.emacs.d/lisp/init-cedet.el")          ; Move to beginning for devel version CEDET
@@ -62,5 +62,5 @@
 (load "~/.emacs.d/lisp/init-shell-mode.el")
 (load "~/.emacs.d/lisp/init-python-mode.el")    ; Based on elpy
 (load "~/.emacs.d/lisp/init-cc-mode.el")
-(load "~/.emacs.d/lisp/init-ess-mode.el")
-(load "~/.emacs.d/lisp/init-matlab-mode.el")
+;; (load "~/.emacs.d/lisp/init-ess-mode.el")
+;; (load "~/.emacs.d/lisp/init-matlab-mode.el")
