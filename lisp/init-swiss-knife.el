@@ -134,3 +134,11 @@
 ;;
 (setq desktop+-base-dir "~/.emacs.d/cache/desktops")
 (setq desktop-save nil)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
+;; undo tree
+;; C-x u ; visualize undo tree
+;;
+(global-undo-tree-mode)  ; Enable global undo tree mode.

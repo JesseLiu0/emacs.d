@@ -42,6 +42,7 @@
 	sphinx-doc
 	sr-speedbar
 	tabbar-ruler
+        undo-tree
 	volatile-highlights
 	whole-line-or-region
 	))
