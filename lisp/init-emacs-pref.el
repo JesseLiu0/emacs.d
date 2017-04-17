@@ -19,7 +19,7 @@
 ;; disable welcome message
 (setq inhibit-startup-message t)
 (setq inhibit-startup-echo-area-message t)
-(setq initial-scratch-message "Emacs started successfully.") 
+(setq initial-scratch-message "\n--------  Welcome to Emacs! --------\n\n") 
 
 ;; Format the title-bar to always include the buffer name
 ;;(setq frame-title-format "Emacs - %b")
