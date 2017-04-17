@@ -9,9 +9,22 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Dired-details+
+;; Use '(' or ')' keys to toggle file/dir details.
+;;
+(require 'dired-details+)
+(dired-details-show)
+;;enable recursive deletion of dirs, but doubly ask if it's not empty.
+(setq dired-recursive-deletes 'top)
+;; ibuffer by default
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; flycheck
 ;;
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; yasnippet
@@ -36,8 +49,7 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; tabbar-ruler
-;;(tabbar-mode t)  ; Disable tabbar-ruler for high cpu usage.
-
+;;
 (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
 ;; (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
 ;; (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.

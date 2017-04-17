@@ -52,7 +52,6 @@
 
 ;; extensions
 (load "~/.emacs.d/lisp/init-cedet.el")          ; Move to beginning for devel version CEDET
-(load "~/.emacs.d/lisp/init-dired.el")          ; dired, ibuffer, etc. for file management
 (load "~/.emacs.d/lisp/init-swiss-knife.el")    ; utilities
 ;; (load "~/.emacs.d/lisp/init-helm.el")
 
