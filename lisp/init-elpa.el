@@ -22,13 +22,13 @@
 	dired-details+
 	;; ein
 	electric-spacing
-	elpy
+	elpy  ; Requires company, yasnippet.
 	;; ess-R-data-view
 	;; ess
 	exec-path-from-shell
 	expand-region
 	flycheck
-	function-args
+	function-args  ; Requires swiper and ivy.
 	;; helm-gtags
 	;; helm-projectile
 	;; helm
