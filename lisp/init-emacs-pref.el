@@ -127,10 +127,6 @@
 ;; Enable narrow-to-region
 (put 'narrow-to-region 'disabled nil)
 
-;; shell-command - enables tab-completion for "shell-command"
-;; (included in Debian "emacs-goodies-el" package)
-;;(shell-command-completion-mode)
-
 ;; auto save prefix (directory)
 (setq auto-save-list-file-prefix "~/.emacs.d/cache/auto-save-list/.saves-")
 
