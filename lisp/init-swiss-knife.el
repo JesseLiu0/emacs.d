@@ -38,10 +38,10 @@
 ;; company-mode
 ;;
 (require 'company)
-(setq company-minimum-prefix-length 1)
+(setq company-minimum-prefix-length 2)
 ;; invert the navigation direction if the the completion popup-isearch-match
 ;; is displayed on top (happens near the bottom of windows)
-(setq company-tooltip-flip-when-above t)
+;; (setq company-tooltip-flip-when-above t)
 (setq company-show-numbers t)  ; display serial number
 (setq company-idle-delay 0.2)  ; menu delay
 (add-hook 'after-init-hook 'global-company-mode)
