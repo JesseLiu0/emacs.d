@@ -15,10 +15,11 @@
 (setq package-selected-packages
       '(;; ac-anaconda
 	autopair
+        color-theme-sanityinc-tomorrow
 	column-marker
 	company-c-headers
         counsel
-	darcula-theme
+	;; darcula-theme
         desktop+
 	dired-details+
 	;; ein
