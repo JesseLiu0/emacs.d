@@ -2,7 +2,7 @@
 ;;     Global key bindings
 
 
-Switch Command and Control on a Mac.
+;; Switch Command and Control on a Mac.
 (if (eq system-type 'darwin)
     (progn
       (setq mac-command-modifier 'control)
