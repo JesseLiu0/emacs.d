@@ -2,13 +2,13 @@
 ;;     Global key bindings
 
 
-;; Switch Command and Control on a Mac.
-;; (if (eq system-type 'darwin)
-    ;; (progn
-      ;; (setq mac-command-modifier 'control)
-      ;; (setq mac-control-modifier 'super)
-      ;; )
-  ;; )
+Switch Command and Control on a Mac.
+(if (eq system-type 'darwin)
+    (progn
+      (setq mac-command-modifier 'control)
+      (setq mac-control-modifier 'super)
+      )
+  )
 
 ;; Mark-ring (bookmarks) is navigable by typing C-u C-SPC and then repeating C-SPC forever
 ;; Push marks to mark-ring by C-SPC C-SPC
