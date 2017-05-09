@@ -33,8 +33,7 @@
 ;; F1-F12
 ;; (global-set-key [f1] 'yic-next-buffer) ; F1/F2 to switch buffers. See below CUSTOM FUNCTIONS.
 ;; (global-set-key [f2] 'yic-prev-buffer) ; F1/F2 to switch buffers. See below CUSTOM FUNCTIONS.
-(global-set-key [f3] 'comment-line) ; F3 to comment a line. See below CUSTOM FUNCTIONS.
-(global-set-key [f4] 'uncomment-line) ; F4 to uncomment a line. See below CUSTOM FUNCTIONS.
+(global-set-key [f3] 'comment-line) ; F3 to toggle comment/uncomment a line.
 ;; (global-set-key [f6] 'kill-this-buffer) ; F6 to kill buffer. Use s-k.
 (global-set-key [f7] 'next-error)
 (global-set-key [f8] 'query-replace)
@@ -128,29 +127,3 @@
   (interactive)
   (bury-buffer (current-buffer))
   (yic-next (buffer-list)))
-
-;; comment line below the cursos
-(defun comment-line ()
-    (interactive)
-    (beginning-of-line)
-    (setq st (point))
-    (end-of-line)
-    (setq en (point))
-    (if (> en st)
-       (comment-region st en))
-    (next-line 1)
-)
-
-;; uncomment line below the cursos
-(defun uncomment-line ()
-    (interactive)
-    (beginning-of-line)
-    (setq st (point))
-    (end-of-line)
-    (setq en (point))
-    (if (> en st)
-       (uncomment-region st en))
-     (next-line 1)
-)
-
-
