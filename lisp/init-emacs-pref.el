@@ -41,7 +41,7 @@
 ;; (set-face-foreground 'highlight nil)
 ;; Columns
 (column-number-mode t)
-(setq fill-column 80)
+(setq-default fill-column 79)
 
 ;; Auto fill without keep hitting M-q
 (auto-fill-mode t)
