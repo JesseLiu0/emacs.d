@@ -8,26 +8,15 @@
 ;; Use jedi as rpc backend
 (setq elpy-rpc-backend "jedi")
 
-;; Use IPython as interactive environment
+;; Use IPython as interpreter for interactive Python
 (when (executable-find "ipython")
- (elpy-use-ipython))
+  (setq python-shell-interpreter "ipython"
+        python-shell-interpreter-args "-i --simple-prompt --matplotlib=qt5"))
 
 ;; Disable CEDET semantic for python-mode as it hangs
 (defun disable-semantic-mode ()
   (semantic-mode -1))
 (add-hook 'python-mode-hook 'disable-semantic-mode)
-
-;; Interpreter
-;; (if (eq system-type 'windows-nt)
-    ;; (setq
-     ;; python-shell-interpreter "C:\\apps\\python\\Scripts\\ipython.exe"
-     ;; python-shell-interpreter-args "-i --matplotlib=qt5"
-     ;; elpy-rpc-python-command "C:\\apps\\python\\python.exe"
-     ;; )
-  ;; (setq elpy-rpc-python-command "python")
-(setq python-shell-interpreter-args "--matplotlib=qt")
-  ;; )
-
 
 ;; Fine tune editing behavior
 (define-key python-mode-map (kbd "RET") 'newline-and-indent)
