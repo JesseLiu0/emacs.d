@@ -37,7 +37,8 @@
 ;; Steve Purcell's script 'exec-path-from-shell' to set Emacs' `exec-path'
 ;; and $PATH from the shell path, so that `shell-command', `compile' and
 ;; the like work as expected. For macOS only.
-(when (memq window-system '(mac ns))
+(exec-path-from-shell-copy-env "WORKON_HOME")  ; pyvenv-workon
+(when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
 
