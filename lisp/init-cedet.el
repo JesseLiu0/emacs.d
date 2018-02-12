@@ -38,32 +38,13 @@
 ;; Change database directory
 (setq semanticdb-default-save-directory "~/.emacs.d/cache/semanticdb/")
 
+;; Case-insensitive search
+(set-default 'semantic-case-fold t)
+
 ;; Enable Semantic
 (semantic-mode 1)
 
-;; if you want to enable support for gnu global
-;; (when (cedet-gnu-global-version-check t)  ;; only in standalone devel version
-  (semanticdb-enable-gnu-global-databases 'c-mode)
-  (semanticdb-enable-gnu-global-databases 'c++-mode)
-;;   (semanticdb-enable-gnu-global-databases 'python-mode)  ;; Elpy replaces semantic
-  (semanticdb-enable-gnu-global-databases 'emacs-lisp-mode)
-;;   )
 
-;; Enable ctags for some languages:
-;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm
-;; (when (cedet-ectag-version-check)  ;; only in standalone devel version
-;;   (semantic-load-enable-all-exuberent-ctags-support))
-
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;
-;; Enable EDE (Project Management) features
-;;(global-ede-mode 1)
-;;
-;; Move EDE project cache file
-;;(setq ede-project-placeholder-cache-file "~/.emacs.d/cache/ede-projects.el")
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
