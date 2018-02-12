@@ -1,32 +1,17 @@
 ;; Description:
-;;     Programming environment for C, C++, Java
+;;     Programming environment for C++ and C
 
 
-;; cc-mode supports C, C++, Java
+;; ----------------------------------------------------------------------------
+;; Config cc-mode
+
 (require 'cc-mode)
 
-;; Initialize function-args for C/C++
-(require 'function-args)
-(fa-config-default)
+;; (add-hook 'c-initialization-hook
+	  ;; (lambda ()
+	    ;; (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
+	    ;; ))
 
-;; Open .h file in C++ mode instead of C mode.
-;;(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
-
-;; Customize c-initialization-hook. Mainly for define-key.
-(add-hook 'c-initialization-hook
-	  (lambda ()
-	    (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
-	    ;; By company-mode
-	    ;; (define-key c-mode-map  [(tab)] 'company-complete)
-	    ;; (define-key c++-mode-map  [(tab)] 'company-complete)
-	    ;; By function-args
-	    (define-key c-mode-map (kbd "M-o")  'fa-show)
-	    (define-key c++-mode-map (kbd "M-o")  'fa-show)
-	    (define-key c-mode-map (kbd "<C-tab>") 'moo-complete)
-	    (define-key c++-mode-map (kbd "<C-tab>") 'moo-complete)
-	    ))
-
-;; Customize c-mode-common-hook
 (add-hook 'c-mode-common-hook
 	  (lambda ()
 	    (c-toggle-auto-hungry-state 1)     ; turn on auto newline and hungry delete
@@ -36,11 +21,32 @@
 	    (auto-fill-mode t)                 ; turn on auto-fill-mode
 	   ))
 
-;; Customize C/C++ mode hooks
-(defun my-c-c++-hook ()
-  ;; (c-set-style "my-style")        ; use my-style defined above
-  (add-to-list 'company-backends 'company-c-headers)
-  )
+;; Add custom include
+;; (semantic-add-system-include "/usr/local/boost_1_54_0/" 'c++-mode)
 
-(add-hook 'c-mode-hook 'my-c-c++-hook)
-(add-hook 'c++-mode-hook 'my-c-c++-hook)
+
+;; ----------------------------------------------------------------------------
+;; Config function-args
+
+(require 'function-args)
+(fa-config-default)
+
+;; Open .h file in C++ mode instead of C mode.
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
+
+
+;; ----------------------------------------------------------------------------
+;; Config irony-mode
+;;https://oremacs.com/2017/03/28/emacs-cpp-ide/
+
+(add-hook 'c++-mode-hook 'irony-mode)
+(add-hook 'c-mode-hook 'irony-mode)
+(add-hook 'objc-mode-hook 'irony-mode)
+
+(defun my-irony-mode-hook ()
+  (define-key irony-mode-map
+      [remap completion-at-point] 'counsel-irony)
+  (define-key irony-mode-map
+      [remap complete-symbol] 'counsel-irony))
+(add-hook 'irony-mode-hook 'my-irony-mode-hook)
+(add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options)

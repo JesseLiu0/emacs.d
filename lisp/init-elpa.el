@@ -31,6 +31,8 @@
 	expand-region
 	flycheck
 	function-args  ; Requires swiper and ivy.
+        irony
+        irony-eldoc
         ivy-hydra
 	magit
 	markdown-preview-mode
