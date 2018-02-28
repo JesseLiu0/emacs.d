@@ -18,6 +18,7 @@
         color-theme-sanityinc-tomorrow
 	column-marker
 	company-c-headers
+        company-irony
         counsel
 	;; darcula-theme
         desktop+

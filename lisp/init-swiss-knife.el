@@ -45,7 +45,8 @@
 (setq company-show-numbers t)  ; display serial number
 (setq company-idle-delay 0.2)  ; menu delay
 (add-hook 'after-init-hook 'global-company-mode)
-
+(eval-after-load 'company
+  '(add-to-list 'company-backends 'company-irony))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Auto insert parenthesis paris
