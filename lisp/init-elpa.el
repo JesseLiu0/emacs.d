@@ -47,6 +47,8 @@
         undo-tree
 	volatile-highlights
 	whole-line-or-region
+        yasnippet
+        yasnippet-snippets
 	))
 
 ;; Check if any required package not installed
