@@ -67,3 +67,8 @@
  (add-to-list 'default-frame-alist '(left . 480))
  (add-to-list 'default-frame-alist '(top . 0))
  ))
+
+
+;; Duplicate effect of --natural-title-bar in Emacs-plus 25
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
